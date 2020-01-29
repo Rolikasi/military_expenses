@@ -1,0 +1,1050 @@
+Recipent,Supplier,delievered,delievery_planned,total
+Afghanistan,USA,25,15,40
+Afghanistan,Canada,16,16,32
+Afghanistan,Russia,15,15,30
+Afghanistan,Brazil,10,16,26
+Afghanistan,Switzerland,18,0,18
+Afghanistan,China,10,0,10
+Afghanistan,India,7,0,7
+Afghanistan,Belarus,0,4,4
+African Union**,USA,20,0,20
+African Union**,Israel,3,0,3
+Albania,USA,30,50,80
+Albania,Russia,8,0,8
+Albania,Brazil,2,2,4
+Albania,Switzerland,2,0,2
+Albania,Canada,1,1,2
+Algeria,France,5,10,15
+Algeria,Poland,8,0,8
+Algeria,United Kingdom,6,0,6
+Algeria,Italy,6,2,8
+Algeria,Angola,0,6,6
+Angola,Belarus,88,0,88
+Angola,Bulgaria,84,0,84
+Angola,China,60,0,60
+Angola,South Africa,45,0,45
+Angola,Russia,24,8,32
+Angola,Italy,6,2,8
+Angola,Canada,0,6,6
+Angola,Israel,4,0,4
+Angola,Spain,0,3,3
+Angola,France,0,2,2
+Angola,USA,1,0,1
+Angola,United Kingdom,1,0,1
+Angola,Switzerland,1,0,1
+Argentina,Sweden,50,100,150
+Argentina,USA,42,15,57
+Argentina,Italy,32,0,32
+Argentina,France,19,4,23
+Armenia,Russia,536,0,536
+Australia,USA,7267,4604,11871
+Australia,France,380,12,392
+Australia,Germany,22,307,329
+Azerbaijan,Russia,2494,0,2494
+Azerbaijan,Israel,1091,42,1133
+Azerbaijan,Turkey,173,20,193
+Azerbaijan,USA,90,0,90
+Azerbaijan,South Africa,65,0,65
+Azerbaijan,Slovakia,36,0,36
+Azerbaijan,Belarus,36,0,36
+Azerbaijan,Czechia,30,0,30
+Azerbaijan,Pakistan,10,0,10
+Azerbaijan,Unknown supplier(s),2,0,2
+Bahamas,Netherlands,9,0,9
+Bahamas,China,2,0,2
+Bahrain,USA,748,497,1245
+Bahrain,Russia,250,0,250
+Bahrain,Turkey,170,0,170
+Bahrain,Belgium,45,0,45
+Bahrain,Canada,27,0,27
+Bahrain,France,20,0,20
+Bahrain,Italy,2,4,6
+Bahrain,China,4,0,4
+Bahrain,United Kingdom,2,0,2
+Bangladesh,China,428,198,626
+Bangladesh,Russia,367,5,372
+Bangladesh,Ukraine,41,7,48
+Bangladesh,Serbia,26,0,26
+Bangladesh,Turkey,20,0,20
+Bangladesh,France,8,4,12
+Bangladesh,Austria,0,6,6
+Bangladesh,USA,1,4,5
+Bangladesh,Italy,5,0,5
+Bangladesh,United Kingdom,0,4,4
+Bangladesh,Czechia,3,0,3
+Bangladesh,Germany,0,2,2
+Bangladesh,Canada,2,0,2
+Bangladesh,Spain,1,0,1
+Belarus,Russia,448,51,499
+Belarus,China,16,0,16
+Belarus,Ukraine,8,0,8
+Belgium,USA,603,41,644
+Belgium,France,14,442,456
+Belgium,Israel,272,0,272
+Belgium,Switzerland,242,0,242
+Belgium,Germany,4,28,32
+Belgium,Spain,0,8,8
+Belgium,Netherlands,4,0,4
+Belgium,Portugal,1,0,1
+Bhutan,France,2,0,2
+Bolivia,China,47,0,47
+Bolivia,France,6,4,10
+Bolivia,Czechia,9,0,9
+Bolivia,USA,2,0,2
+Bolivia,Germany,2,0,2
+Botswana,France,200,51,251
+Botswana,USA,1,0,1
+Botswana,Spain,1,0,1
+Brazil,Italy,386,1756,2142
+Brazil,USA,559,154,713
+Brazil,Israel,421,185,606
+Brazil,Russia,142,0,142
+Brazil,Sweden,80,37,117
+Brazil,France,45,44,89
+Brazil,(multiple sellers),0,56,56
+Brazil,Germany,34,16,50
+Brazil,United Kingdom,4,42,46
+Brazil,Czechia,20,25,45
+Brazil,Switzerland,24,0,24
+Brazil,Norway,20,0,20
+Brazil,Canada,2,4,6
+Brazil,Spain,1,2,3
+Brazil,"Korea, South",0,2,2
+Brunei,USA,12,0,12
+Brunei,France,10,0,10
+Brunei,Sweden,1,0,1
+Brunei,Netherlands,1,0,1
+Brunei,Germany,1,0,1
+Brunei,Denmark,1,0,1
+Bulgaria,USA,10,0,10
+Burkina Faso,Turkey,30,30,60
+Burkina Faso,South Africa,31,0,31
+Burkina Faso,Taiwan,2,0,2
+Burkina Faso,Russia,2,0,2
+Burkina Faso,Italy,1,0,1
+Burkina Faso,Austria,1,0,1
+Burundi,USA,25,0,25
+Cameroon,China,68,0,68
+Cameroon,Serbia,40,0,40
+Cameroon,France,24,0,24
+Cameroon,Sweden,23,0,23
+Cameroon,Israel,21,0,21
+Cameroon,South Africa,12,0,12
+Cameroon,USA,10,0,10
+Cameroon,Russia,7,0,7
+Cameroon,Italy,0,4,4
+Cameroon,UAE,2,0,2
+Cameroon,Spain,2,0,2
+Cameroon,Slovakia,2,0,2
+Canada,USA,4060,184,4244
+Canada,Norway,500,0,500
+Canada,Netherlands,106,0,106
+Canada,Germany,25,2,27
+Canada,Israel,7,19,26
+Canada,Sweden,24,0,24
+Canada,Australia,0,18,18
+Canada,Spain,0,16,16
+Canada,United Kingdom,0,15,15
+Canada,Switzerland,12,0,12
+Canada,Greece,1,0,1
+Central African Rep.,China,12,0,12
+Chad,Israel,11,0,11
+Chad,USA,6,0,6
+Chad,Ukraine,6,0,6
+Chad,Italy,2,0,2
+Chile,USA,218,0,218
+Chile,France,8,0,8
+Chile,Italy,7,0,7
+Chile,Brazil,6,0,6
+Chile,Germany,2,3,5
+Chile,Finland,4,0,4
+Chile,Norway,3,0,3
+Chile,Unknown supplier(s),1,0,1
+Chile,United Kingdom,0,1,1
+China,Germany,4682,14,4696
+China,Russia,3856,87,3943
+China,France,766,4,770
+China,Switzerland,600,0,600
+China,United Kingdom,500,0,500
+China,Ukraine,170,181,351
+China,Uzbekistan,3,0,3
+Colombia,Israel,425,0,425
+Colombia,USA,314,10,324
+Colombia,Italy,201,0,201
+Colombia,Canada,44,0,44
+Colombia,"Korea, South",20,11,31
+Colombia,Germany,21,0,21
+Colombia,United Kingdom,18,0,18
+Colombia,Netherlands,12,0,12
+Colombia,Denmark,7,0,7
+Colombia,Finland,4,0,4
+Colombia,Portugal,2,0,2
+Colombia,Dominican Rep.,2,0,2
+Colombia,France,1,0,1
+"Congo, Dem. Rep.",Ukraine,25,0,25
+"Congo, Dem. Rep.",Bulgaria,12,0,12
+"Congo, Dem. Rep.",China,5,0,5
+"Congo, Republic of ",UAE,36,0,36
+"Congo, Republic of ",South Africa,29,0,29
+"Congo, Republic of ",United Kingdom,28,0,28
+"Congo, Republic of ",Russia,2,0,2
+Costa Rica,USA,2,0,2
+Côte d’Ivoire,Belarus,10,0,10
+Côte d’Ivoire,Sweden,9,0,9
+Côte d’Ivoire,Bulgaria,5,0,5
+Côte d’Ivoire,United Kingdom,4,0,4
+Côte d’Ivoire,France,3,0,3
+Côte d’Ivoire,USA,0,2,2
+Côte d’Ivoire,Russia,2,0,2
+Côte d’Ivoire,Canada,0,2,2
+Côte d’Ivoire,Spain,0,1,1
+Côte d’Ivoire,China,1,0,1
+Croatia,USA,334,2,336
+Croatia,Germany,12,0,12
+Croatia,Israel,0,8,8
+Croatia,Ukraine,1,0,1
+Cyprus,Oman,1,0,1
+Cyprus,Israel,1,0,1
+Czechia,USA,62,92,154
+Czechia,Sweden,0,80,80
+Czechia,Italy,0,80,80
+Czechia,France,0,62,62
+Czechia,Austria,0,20,20
+Czechia,Israel,0,8,8
+Czechia,Spain,0,2,2
+Denmark,USA,543,81,624
+Denmark,Switzerland,47,305,352
+Denmark,Sweden,28,284,312
+Denmark,Germany,15,16,31
+Denmark,France,9,15,24
+Denmark,Netherlands,6,0,6
+Denmark,Unknown supplier(s),1,0,1
+Denmark,Bahamas,1,0,1
+Djibouti,USA,32,0,32
+Djibouti,Unknown supplier(s),4,0,4
+Djibouti,China,4,0,4
+Djibouti,Canada,2,0,2
+Dominican Rep.,USA,6,0,6
+Ecuador,France,13,0,13
+Ecuador,Spain,7,0,7
+Ecuador,Netherlands,6,0,6
+Ecuador,Canada,6,0,6
+Ecuador,Poland,1,0,1
+Egypt,Russia,1768,1136,2904
+Egypt,UAE,1312,1200,2512
+Egypt,Germany,1541,366,1907
+Egypt,USA,1793,58,1851
+Egypt,France,940,172,1112
+Egypt,Canada,36,0,36
+Egypt,China,28,1,29
+Egypt,Spain,18,0,18
+Egypt,Netherlands,11,6,17
+Egypt,South Africa,14,0,14
+Egypt,Italy,6,3,9
+Egypt,Finland,8,0,8
+Egypt,Bulgaria,2,0,2
+Egypt,"Korea, South",1,0,1
+El Salvador,Chile,10,0,10
+El Salvador,Israel,2,0,2
+Equatorial Guinea,South Africa,25,0,25
+Equatorial Guinea,USA,4,0,4
+Equatorial Guinea,Canada,0,4,4
+Equatorial Guinea,Spain,0,2,2
+Equatorial Guinea,Ukraine,1,0,1
+Equatorial Guinea,Russia,1,0,1
+Estonia,USA,240,2,242
+Estonia,Netherlands,131,0,131
+Estonia,France,86,17,103
+Estonia,Norway,0,35,35
+Estonia,"Korea, South",0,12,12
+Ethiopia,Ukraine,143,0,143
+Ethiopia,Israel,75,0,75
+Ethiopia,China,20,0,20
+Ethiopia,Sweden,12,0,12
+Ethiopia,France,12,0,12
+Ethiopia,USA,2,0,2
+Fiji,Australia,10,1,11
+Finland,Sweden,1508,1,1509
+Finland,USA,776,14,790
+Finland,Denmark,706,0,706
+Finland,Netherlands,88,28,116
+Finland,"Korea, South",5,43,48
+Finland,United Kingdom,28,0,28
+Finland,Norway,16,0,16
+Finland,Italy,13,0,13
+Finland,France,12,0,12
+Finland,Germany,3,0,3
+Finland,Israel,0,2,2
+France,USA,2236,15,2251
+France,United Kingdom,5,40,45
+France,Germany,20,12,32
+France,Switzerland,15,2,17
+France,Canada,15,2,17
+France,Denmark,10,6,16
+France,Cote d'Ivoire,9,0,9
+France,Italy,5,3,8
+France,Belgium,4,0,4
+France,Netherlands,3,0,3
+Gabon,Germany,12,0,12
+Gabon,France,8,0,8
+Georgia,USA,217,205,422
+Georgia,France,28,0,28
+Germany,Israel,1553,4455,6008
+Germany,USA,3090,33,3123
+Germany,Switzerland,176,0,176
+Germany,Sweden,54,2,56
+Germany,Netherlands,17,10,27
+Germany,France,6,18,24
+Germany,Italy,1,11,12
+Germany,Canada,7,5,12
+Germany,Croatia,3,0,3
+Germany,Poland,2,0,2
+Germany,United Kingdom,1,0,1
+Ghana,China,104,0,104
+Ghana,Canada,52,5,57
+Ghana,USA,50,0,50
+Ghana,South Africa,20,0,20
+Ghana,France,2,0,2
+Ghana,Spain,1,0,1
+Ghana,Russia,0,1,1
+Greece,USA,681,87,768
+Greece,Germany,83,78,161
+Greece,France,70,10,80
+Greece,Netherlands,12,8,20
+Greece,Denmark,17,0,17
+Greece,Italy,14,2,16
+Greece,United Kingdom,2,2,4
+Guatemala,USA,5,2,7
+Guatemala,Spain,3,0,3
+Guinea,South Africa,32,0,32
+Guinea,France,6,0,6
+Guyana,Unknown supplier(s),2,0,2
+Guyana,Brazil,2,0,2
+Hamas (Palestine)*,North Korea,25,0,25
+Honduras,Taiwan,4,0,4
+Honduras,USA,3,0,3
+Honduras,Unknown supplier(s),2,0,2
+Honduras,Israel,1,0,1
+Honduras,Colombia,1,0,1
+Hungary,France,180,16,196
+Hungary,Germany,2,100,102
+Hungary,Czechia,4,0,4
+Hungary,Russia,3,0,3
+Hungary,Sweden,1,0,1
+Huthi rebels (Yemen)*,Iran,10,0,10
+India,Russia,46766,32042,78808
+India,France,22417,575,22992
+India,Germany,22201,520,22721
+India,Israel,2597,1642,4239
+India,USA,644,2078,2722
+India,United Kingdom,445,141,586
+India,South Africa,200,50,250
+India,Canada,77,122,199
+India,Ukraine,92,32,124
+India,"Korea, South",10,90,100
+India,Switzerland,75,0,75
+India,Spain,0,56,56
+India,Italy,10,24,34
+India,Denmark,0,31,31
+India,Kyrgyzstan,14,0,14
+India,Netherlands,3,4,7
+India,Brazil,3,0,3
+India,Norway,0,1,1
+Indonesia,USA,486,273,759
+Indonesia,France,476,89,565
+Indonesia,United Kingdom,508,0,508
+Indonesia,Germany,251,27,278
+Indonesia,"Korea, South",156,85,241
+Indonesia,Belgium,191,50,241
+Indonesia,China,160,6,166
+Indonesia,Australia,12,50,62
+Indonesia,Brazil,52,0,52
+Indonesia,Russia,37,11,48
+Indonesia,Italy,39,0,39
+Indonesia,Czechia,8,29,37
+Indonesia,Canada,34,3,37
+Indonesia,Spain,15,0,15
+Indonesia,Poland,14,0,14
+Indonesia,Switzerland,12,1,13
+Indonesia,Ukraine,10,0,10
+Indonesia,Sweden,4,1,5
+Indonesia,Netherlands,5,0,5
+Indonesia,Austria,4,0,4
+Indonesia,Denmark,1,2,3
+Indonesia,Norway,0,1,1
+Indonesia,New Zealand,0,1,1
+Iran,Russia,13556,0,13556
+Iran,China,1110,0,1110
+Iraq,USA,14551,0,14551
+Iraq,Russia,4740,2750,7490
+Iraq,Germany,1518,0,1518
+Iraq,Bulgaria,698,0,698
+Iraq,Spain,231,0,231
+Iraq,Czechia,119,0,119
+Iraq,Unknown supplier(s),110,0,110
+Iraq,South Africa,80,0,80
+Iraq,China,44,0,44
+Iraq,Iran,29,0,29
+Iraq,"Korea, South",24,0,24
+Iraq,Estonia,12,0,12
+Iraq,Belarus,9,0,9
+Iraq,Slovenia,8,0,8
+Iraq,Italy,2,0,2
+Ireland,Sweden,50,25,75
+Ireland,Norway,0,65,65
+Ireland,Finland,8,0,8
+Ireland,United Kingdom,4,0,4
+Ireland,Switzerland,1,3,4
+Ireland,Italy,4,0,4
+Israel,USA,12269,3303,15572
+Israel,Germany,857,93,950
+Israel,Italy,30,0,30
+Italy,USA,1850,419,2269
+Italy,Israel,1643,100,1743
+Italy,France,13,3,16
+Italy,United Kingdom,12,2,14
+Italy,Canada,8,0,8
+Italy,Germany,6,0,6
+Jamaica,USA,15,2,17
+Jamaica,Australia,12,0,12
+Jamaica,Austria,0,4,4
+Jamaica,Unknown supplier(s),0,2,2
+Jamaica,Netherlands,2,0,2
+Japan,USA,2057,649,2706
+Japan,France,462,0,462
+Japan,United Kingdom,27,14,41
+Japan,Sweden,36,4,40
+Japan,Germany,15,16,31
+Japan,Australia,8,0,8
+Japan,Norway,0,1,1
+Jordan,USA,3735,206,3941
+Jordan,Netherlands,608,0,608
+Jordan,UAE,186,0,186
+Jordan,Italy,84,0,84
+Jordan,Germany,66,0,66
+Jordan,South Africa,25,25,50
+Jordan,China,26,0,26
+Jordan,Israel,16,0,16
+Jordan,Canada,16,0,16
+Jordan,Switzerland,12,0,12
+Jordan,United Kingdom,8,0,8
+Jordan,Russia,2,2,4
+Jordan,France,3,0,3
+Jordan,Spain,2,0,2
+Jordan,Poland,2,0,2
+Kazakhstan,Russia,352,116,468
+Kazakhstan,South Africa,90,1,91
+Kazakhstan,Ukraine,40,0,40
+Kazakhstan,Turkey,40,0,40
+Kazakhstan,France,3,18,21
+Kazakhstan,Germany,12,0,12
+Kazakhstan,Canada,12,0,12
+Kazakhstan,Israel,10,0,10
+Kazakhstan,China,4,3,7
+Kazakhstan,Spain,6,0,6
+Kazakhstan,USA,4,0,4
+Kenya,China,65,0,65
+Kenya,Serbia,28,0,28
+Kenya,USA,11,15,26
+Kenya,Sweden,12,0,12
+Kenya,France,12,0,12
+Kenya,UAE,8,0,8
+Kenya,Jordan,3,0,3
+Kenya,Italy,0,3,3
+Kenya,Montenegro,1,0,1
+Kiribati,Australia,0,1,1
+"Korea, South",USA,2588,1240,3828
+"Korea, South",Germany,1475,276,1751
+"Korea, South",France,10,214,224
+"Korea, South",Israel,123,3,126
+"Korea, South",Sweden,28,0,28
+"Korea, South",United Kingdom,11,13,24
+"Korea, South",Spain,1,3,4
+Kosovo,Turkey,10,0,10
+Kuwait,USA,874,339,1213
+Kuwait,France,120,330,450
+Kuwait,Norway,10,218,228
+Kuwait,Austria,80,0,80
+Kuwait,Turkey,40,0,40
+Kuwait,Russia,33,0,33
+Kuwait,Italy,0,29,29
+Kuwait,Switzerland,6,6,12
+Kuwait,Germany,12,0,12
+Kuwait,United Kingdom,8,0,8
+Kuwait,UAE,3,0,3
+Kyrgyzstan,Russia,72,0,72
+Laos,China,87,0,87
+Laos,Russia,16,28,44
+Laos,France,2,0,2
+Latvia,United Kingdom,96,27,123
+Latvia,Sweden,100,0,100
+Latvia,Denmark,50,0,50
+Latvia,Austria,47,0,47
+Latvia,USA,5,6,11
+Latvia,Germany,5,0,5
+Latvia,Israel,0,1,1
+Lebanon,USA,4574,1124,5698
+Lebanon,France,209,0,209
+Lebanon,Italy,53,0,53
+Lebanon,Jordan,42,0,42
+Lebanon,Brazil,26,0,26
+Lebanon,Canada,8,0,8
+Lebanon,UAE,1,0,1
+Lesotho,France,2,0,2
+Libya,UAE,159,0,159
+Libya,USA,46,0,46
+Libya,Unknown supplier(s),10,0,10
+Libya,Egypt,8,0,8
+Libya,Belarus,4,0,4
+Libya,Italy,2,0,2
+Libya,Netherlands,1,0,1
+Lithuania,Israel,32,1086,1118
+Lithuania,USA,50,403,453
+Lithuania,Germany,192,112,304
+Lithuania,Poland,140,0,140
+Lithuania,Sweden,50,1,51
+Lithuania,Bulgaria,36,0,36
+Lithuania,France,3,0,3
+Lithuania,Norway,0,2,2
+Lithuania,Denmark,1,0,1
+Luxembourg,Sweden,50,0,50
+Luxembourg,Germany,0,6,6
+Luxembourg,Spain,0,1,1
+Malawi,South Africa,31,0,31
+Malawi,United Kingdom,4,0,4
+Malaysia,South Africa,180,267,447
+Malaysia,Germany,179,96,275
+Malaysia,Turkey,161,96,257
+Malaysia,United Kingdom,121,0,121
+Malaysia,Norway,0,100,100
+Malaysia,USA,60,30,90
+Malaysia,France,20,35,55
+Malaysia,Netherlands,8,24,32
+Malaysia,Thailand,20,0,20
+Malaysia,Italy,0,12,12
+Malaysia,Unknown supplier(s),9,0,9
+Malaysia,"Korea, South",2,6,8
+Malaysia,Sweden,0,6,6
+Malaysia,Denmark,6,0,6
+Malaysia,Switzerland,5,0,5
+Malaysia,Canada,5,0,5
+Malaysia,Spain,4,0,4
+Malaysia,China,0,4,4
+Malaysia,Brunei,4,0,4
+Mali,Qatar,24,0,24
+Mali,Slovakia,18,0,18
+Mali,South Africa,8,0,8
+Mali,France,7,0,7
+Mali,Canada,6,0,6
+Mali,Sweden,5,0,5
+Mali,China,5,0,5
+Mali,Russia,2,2,4
+Mali,Brazil,4,0,4
+Mali,Spain,1,0,1
+Malta,Italy,3,1,4
+Malta,USA,1,0,1
+Marshall Islands,Australia,0,1,1
+Mauritania,Turkey,12,0,12
+Mauritania,United Kingdom,4,0,4
+Mauritania,China,2,1,3
+Mauritania,USA,2,0,2
+Mauritania,Italy,2,0,2
+Mauritius,India,4,0,4
+Mauritius,USA,2,0,2
+Mauritius,Germany,2,0,2
+Mauritius,Israel,1,0,1
+Mexico,USA,962,428,1390
+Mexico,Canada,64,0,64
+Mexico,Germany,25,0,25
+Mexico,Czechia,22,0,22
+Mexico,France,19,1,20
+Mexico,Netherlands,9,1,10
+Mexico,Israel,7,0,7
+Mexico,Spain,6,0,6
+Mexico,Sweden,2,3,5
+Mexico,Denmark,2,2,4
+Micronesia,Australia,0,1,1
+Mongolia,Russia,110,0,110
+Montenegro,Austria,4,0,4
+Montenegro,USA,3,0,3
+Montenegro,Turkey,1,0,1
+Morocco,USA,1968,962,2930
+Morocco,Italy,56,0,56
+Morocco,France,50,0,50
+Morocco,Germany,4,0,4
+Morocco,United Kingdom,2,0,2
+Mozambique,China,24,0,24
+Mozambique,Germany,6,0,6
+Mozambique,Brazil,3,0,3
+Mozambique,Ukraine,2,0,2
+Mozambique,Slovakia,1,0,1
+Myanmar,Russia,2042,16,2058
+Myanmar,China,398,42,440
+Myanmar,Belarus,102,0,102
+Myanmar,Ukraine,18,32,50
+Myanmar,India,17,6,23
+Myanmar,Germany,20,0,20
+Myanmar,France,8,0,8
+Myanmar,Unknown supplier(s),6,0,6
+Myanmar,Israel,4,2,6
+Myanmar,Netherlands,2,0,2
+Myanmar,Belgium,1,0,1
+Namibia,China,52,0,52
+Namibia,South Africa,8,0,8
+Namibia,India,2,0,2
+NATO**,USA,420,5,425
+NATO**,Spain,2,0,2
+NATO**,Czechia,2,0,2
+Nepal,China,62,0,62
+Nepal,Poland,0,4,4
+Nepal,USA,0,2,2
+Nepal,Russia,2,0,2
+Nepal,Italy,1,0,1
+Nepal,Indonesia,0,1,1
+Nepal,India,1,0,1
+Nepal,France,1,0,1
+Netherlands,USA,664,354,1018
+Netherlands,Germany,228,5,233
+Netherlands,Norway,140,0,140
+Netherlands,France,37,0,37
+Netherlands,Italy,20,0,20
+Netherlands,Australia,20,0,20
+Netherlands,Spain,0,2,2
+New Zealand,USA,31,6,37
+New Zealand,Australia,25,1,26
+New Zealand,Canada,11,0,11
+New Zealand,France,9,0,9
+New Zealand,Israel,6,0,6
+New Zealand,Netherlands,0,2,2
+New Zealand,United Kingdom,0,1,1
+New Zealand,"Korea, South",0,1,1
+Nicaragua,Russia,138,0,138
+Niger,South Africa,21,0,21
+Niger,China,20,0,20
+Niger,France,18,0,18
+Niger,USA,3,0,3
+Nigeria,USA,124,497,621
+Nigeria,Russia,119,223,342
+Nigeria,UAE,100,97,197
+Nigeria,China,158,0,158
+Nigeria,Serbia,100,0,100
+Nigeria,South Africa,81,0,81
+Nigeria,Ukraine,53,0,53
+Nigeria,Czechia,47,0,47
+Nigeria,Canada,20,12,32
+Nigeria,Brazil,0,15,15
+Nigeria,Pakistan,10,3,13
+Nigeria,Bulgaria,12,0,12
+Nigeria,Italy,0,6,6
+Nigeria,France,6,0,6
+Nigeria,Austria,5,0,5
+Nigeria,Germany,4,0,4
+North Macedonia,Turkey,1,0,1
+Norway,USA,430,104,534
+Norway,Sweden,110,0,110
+Norway,Italy,72,4,76
+Norway,Netherlands,44,0,44
+Norway,Germany,3,31,34
+Norway,"Korea, South",1,24,25
+Norway,France,8,12,20
+Norway,Finland,2,0,2
+Oman,USA,998,400,1398
+Oman,Germany,73,105,178
+Oman,Turkey,67,105,172
+Oman,France,130,0,130
+Oman,United Kingdom,23,0,23
+Oman,Canada,16,0,16
+Oman,Netherlands,14,0,14
+Oman,Spain,12,0,12
+Oman,Norway,10,0,10
+Oman,Italy,7,0,7
+Oman,Singapore,4,0,4
+Oman,Denmark,4,0,4
+Oman,Australia,2,0,2
+OSCE**,Austria,6,0,6
+Pakistan,China,32005,1549,33554
+Pakistan,USA,3842,1036,4878
+Pakistan,Sweden,1479,0,1479
+Pakistan,Italy,844,129,973
+Pakistan,Ukraine,405,220,625
+Pakistan,Russia,165,63,228
+Pakistan,Brazil,100,0,100
+Pakistan,Turkey,59,34,93
+Pakistan,Jordan,86,0,86
+Pakistan,Switzerland,18,0,18
+Pakistan,France,12,2,14
+Pakistan,Germany,0,8,8
+Pakistan,United Kingdom,6,1,7
+Pakistan,Netherlands,0,2,2
+Pakistan,Malta,1,0,1
+Pakistan,Canada,1,0,1
+Palau,Australia,0,1,1
+Panama,Italy,2,0,2
+Panama,Canada,2,0,2
+Panama,USA,1,0,1
+Papua New Guinea,New Zealand,4,0,4
+Papua New Guinea,Australia,2,0,2
+Peru,Israel,182,0,182
+Peru,Canada,64,0,64
+Peru,USA,50,0,50
+Peru,New Zealand,42,4,46
+Peru,"Korea, South",26,3,29
+Peru,China,27,0,27
+Peru,Russia,24,0,24
+Peru,France,17,0,17
+Peru,Italy,8,0,8
+Peru,Netherlands,6,0,6
+Peru,United Kingdom,4,0,4
+Philippines,USA,227,75,302
+Philippines,Israel,130,47,177
+Philippines,Germany,0,130,130
+Philippines,Jordan,0,62,62
+Philippines,"Korea, South",13,11,24
+Philippines,Belgium,24,0,24
+Philippines,Canada,6,6,12
+Philippines,Italy,10,0,10
+Philippines,Brazil,0,6,6
+Philippines,Japan,5,0,5
+Philippines,Australia,5,0,5
+Philippines,Netherlands,4,0,4
+Philippines,Indonesia,4,0,4
+Philippines,Spain,3,0,3
+Philippines,United Kingdom,0,2,2
+Philippines,Sweden,0,2,2
+Philippines,France,0,2,2
+PKK (Turkey)*,Unknown supplier(s),10,0,10
+Poland,USA,157,2730,2887
+Poland,Israel,400,600,1000
+Poland,Sweden,860,92,952
+Poland,Finland,860,92,952
+Poland,Italy,324,1,325
+Poland,Germany,204,89,293
+Poland,United Kingdom,34,86,120
+Poland,"Korea, South",32,88,120
+Poland,Norway,88,14,102
+Poland,Ukraine,40,0,40
+Poland,Canada,12,0,12
+Poland,Netherlands,0,3,3
+Portugal,USA,298,1,299
+Portugal,Austria,188,0,188
+Portugal,Denmark,22,1,23
+Portugal,Italy,1,4,5
+Portugal,Brazil,0,5,5
+Portugal,Finland,0,4,4
+PRC (Israel/Palestine)*,North Korea,25,0,25
+Qatar,USA,1484,7334,8818
+Qatar,France,624,1454,2078
+Qatar,Ukraine,700,0,700
+Qatar,Turkey,75,583,658
+Qatar,Russia,100,100,200
+Qatar,Italy,4,156,160
+Qatar,Germany,137,17,154
+Qatar,China,56,0,56
+Qatar,United Kingdom,0,36,36
+Qatar,Canada,25,0,25
+Qatar,Switzerland,24,0,24
+Qatar,Pakistan,8,0,8
+Qatar,Norway,0,3,3
+Romania,Israel,457,543,1000
+Romania,USA,118,484,602
+Romania,Switzerland,53,217,270
+Romania,France,16,0,16
+Romania,Portugal,14,0,14
+Romania,Italy,7,0,7
+Russia,Italy,358,0,358
+Russia,Ukraine,187,0,187
+Russia,Czechia,21,0,21
+Russia,Israel,10,0,10
+Russia,Turkey,2,0,2
+Russia,Unknown supplier(s),1,0,1
+Rwanda,China,53,0,53
+Rwanda,Turkey,46,0,46
+Rwanda,Russia,6,0,6
+Samoa,Australia,0,1,1
+Saudi Arabia,USA,43083,4471,47554
+Saudi Arabia,United Kingdom,3317,378,3695
+Saudi Arabia,France,2286,212,2498
+Saudi Arabia,Bulgaria,2224,0,2224
+Saudi Arabia,Canada,1067,737,1804
+Saudi Arabia,Germany,1736,26,1762
+Saudi Arabia,Serbia,852,0,852
+Saudi Arabia,Turkey,670,0,670
+Saudi Arabia,Belgium,84,238,322
+Saudi Arabia,Netherlands,225,0,225
+Saudi Arabia,Spain,107,5,112
+Saudi Arabia,"Korea, South",100,0,100
+Saudi Arabia,Georgia,100,0,100
+Saudi Arabia,South Africa,75,0,75
+Saudi Arabia,Sweden,73,0,73
+Saudi Arabia,Switzerland,55,5,60
+Saudi Arabia,Austria,50,0,50
+Saudi Arabia,Italy,34,12,46
+Saudi Arabia,Slovakia,36,0,36
+Saudi Arabia,Finland,36,0,36
+Saudi Arabia,China,35,0,35
+Saudi Arabia,Ukraine,0,7,7
+Senegal,Israel,60,0,60
+Senegal,South Africa,55,0,55
+Senegal,USA,27,8,35
+Senegal,Bulgaria,32,0,32
+Senegal,China,31,0,31
+Senegal,France,28,2,30
+Senegal,Turkey,25,0,25
+Senegal,Sweden,9,0,9
+Senegal,Ukraine,8,0,8
+Senegal,"Korea, South",0,4,4
+Senegal,Czechia,0,4,4
+Senegal,Canada,0,4,4
+Senegal,Slovakia,3,0,3
+Senegal,Indonesia,1,2,3
+Serbia,Russia,8,72,80
+Serbia,Germany,1,5,6
+Serbia,Belarus,4,0,4
+Seychelles,India,3,0,3
+Seychelles,China,1,0,1
+Sierra Leone,China,10,0,10
+Singapore,USA,2196,14,2210
+Singapore,Israel,304,200,504
+Singapore,France,398,85,483
+Singapore,South Africa,107,0,107
+Singapore,Germany,35,10,45
+Singapore,Italy,17,3,20
+Singapore,United Kingdom,6,12,18
+Singapore,Netherlands,11,3,14
+Singapore,Switzerland,13,0,13
+Singapore,Spain,2,4,6
+Slovakia,USA,8,149,157
+Slovakia,Finland,0,81,81
+Slovakia,Italy,2,0,2
+Slovakia,China,1,0,1
+Slovenia,USA,7,38,45
+Solomon Islands,Australia,0,1,1
+Somalia,Qatar,0,68,68
+Somalia,UAE,15,0,15
+Somalia,Sweden,13,0,13
+Somalia,France,13,0,13
+Somalia,China,12,0,12
+Somalia,Netherlands,0,6,6
+Somalia,Italy,5,0,5
+South Africa,Sweden,0,264,264
+South Africa,Finland,0,238,238
+South Africa,United Kingdom,20,0,20
+South Africa,Russia,1,0,1
+South Sudan,China,1200,0,1200
+South Sudan,UAE,173,0,173
+South Sudan,Unknown supplier(s),51,0,51
+South Sudan,Russia,6,0,6
+South Sudan,Uganda,2,0,2
+Spain,Israel,2630,6,2636
+Spain,Germany,863,87,950
+Spain,USA,335,49,384
+Spain,Switzerland,21,348,369
+Spain,Sweden,0,348,348
+Spain,France,42,10,52
+Spain,Europe multi-state,0,23,23
+Sri Lanka,France,4,0,4
+Sri Lanka,India,2,0,2
+Sri Lanka,Australia,2,0,2
+Sri Lanka,USA,1,0,1
+Sri Lanka,China,0,1,1
+Sudan,China,714,0,714
+Sudan,Unknown supplier(s),124,0,124
+Sudan,Belarus,88,4,92
+Sudan,Russia,20,4,24
+Suriname,India,3,0,3
+Sweden,USA,160,70,230
+Sweden,Finland,113,0,113
+Sweden,Norway,104,2,106
+Sweden,United Kingdom,0,60,60
+Sweden,Italy,0,60,60
+Sweden,France,17,1,18
+Sweden,Germany,5,1,6
+Switzerland,Sweden,1000,3000,4000
+Switzerland,USA,570,0,570
+Switzerland,Norway,130,0,130
+Switzerland,Israel,0,6,6
+Switzerland,Germany,5,0,5
+Syria,Iran,1010,0,1010
+Syria,China,500,0,500
+Syria,Russia,294,0,294
+Syria rebels*,Unknown supplier(s),50,0,50
+Syria rebels*,Turkey,12,0,12
+Syria rebels*,USA,7,0,7
+Taiwan,USA,2811,1511,4322
+Taiwan,Germany,2,22,24
+Taiwan,Italy,1,17,18
+Tajikistan,Russia,45,0,45
+Tajikistan,China,20,0,20
+Tanzania,China,29,0,29
+Tanzania,France,5,7,12
+Tanzania,Netherlands,4,0,4
+Thailand,Ukraine,1693,0,1693
+Thailand,Germany,282,25,307
+Thailand,China,248,54,302
+Thailand,USA,187,11,198
+Thailand,United Kingdom,160,1,161
+Thailand,Israel,34,42,76
+Thailand,France,16,55,71
+Thailand,Italy,19,1,20
+Thailand,Sweden,12,4,16
+Thailand,"Korea, South",5,9,14
+Thailand,Switzerland,12,0,12
+Thailand,Russia,4,4,8
+Thailand,Spain,1,1,2
+Thailand,Netherlands,0,2,2
+Thailand,Canada,2,0,2
+Timor-Leste,Australia,0,1,1
+Togo,France,32,0,32
+Togo,Sweden,30,0,30
+Tonga,Australia,1,1,2
+Trinidad and Tobago,Netherlands,6,0,6
+Trinidad and Tobago,Australia,0,2,2
+Trinidad and Tobago,China,1,0,1
+Tunisia,USA,396,4,400
+Tunisia,Turkey,170,0,170
+Tunisia,France,21,0,21
+Tunisia,Germany,15,0,15
+Tunisia,UAE,10,0,10
+Tunisia,Sweden,4,0,4
+Tunisia,Netherlands,4,0,4
+Turkey,USA,3149,472,3621
+Turkey,Israel,468,0,468
+Turkey,Germany,138,51,189
+Turkey,Russia,0,129,129
+Turkey,Italy,63,34,97
+Turkey,"Korea, South",52,18,70
+Turkey,Pakistan,0,52,52
+Turkey,Canada,4,39,43
+Turkey,Netherlands,16,15,31
+Turkey,Spain,13,4,17
+Turkey,France,9,6,15
+Turkmenistan,China,244,0,244
+Turkmenistan,Turkey,153,0,153
+Turkmenistan,Russia,129,0,129
+Turkmenistan,Italy,37,0,37
+Turkmenistan,France,28,0,28
+Turkmenistan,Netherlands,16,0,16
+Turkmenistan,UAE,12,0,12
+Turkmenistan,Germany,12,0,12
+Turkmenistan,Belarus,10,0,10
+Turkmenistan,Czechia,6,0,6
+Turkmenistan,Israel,1,0,1
+Tuvalu,Australia,0,1,1
+UAE,USA,22629,15056,37685
+UAE,Turkey,10050,650,10700
+UAE,Russia,2000,3000,5000
+UAE,South Africa,1598,1,1599
+UAE,France,173,4,177
+UAE,Italy,146,25,171
+UAE,Singapore,96,0,96
+UAE,Germany,74,8,82
+UAE,Sweden,60,5,65
+UAE,Canada,35,14,49
+UAE,Finland,46,0,46
+UAE,China,40,6,46
+UAE,Denmark,6,0,6
+UAE,United Kingdom,1,4,5
+UAE,Spain,0,5,5
+UAE,Serbia,0,2,2
+UAE,Netherlands,2,0,2
+UAE,Malaysia,2,0,2
+UAE,New Zealand,1,0,1
+Uganda,South Africa,25,20,45
+Uganda,USA,32,0,32
+Uganda,France,31,0,31
+Uganda,Bulgaria,22,0,22
+Uganda,Sweden,17,0,17
+Uganda,Austria,1,0,1
+Ukraine,USA,248,3,251
+Ukraine,Czechia,63,170,233
+Ukraine,Poland,100,0,100
+Ukraine,United Kingdom,75,0,75
+Ukraine,UAE,47,0,47
+Ukraine,Canada,39,0,39
+Ukraine,France,1,11,12
+Ukraine,Turkey,0,6,6
+Ukraine,Italy,0,4,4
+Ukraine,Denmark,0,3,3
+Ukraine,Spain,0,1,1
+Ukraine Rebels*,Russia,125,0,125
+United Kingdom,USA,2731,933,3664
+United Kingdom,Germany,71,1418,1489
+United Kingdom,Spain,6,583,589
+United Kingdom,Israel,54,0,54
+United Kingdom,Canada,10,0,10
+United Kingdom,Finland,6,2,8
+United Kingdom,Brazil,5,0,5
+United Kingdom,Sweden,4,0,4
+United Kingdom,"Korea, South",3,1,4
+United Kingdom,Netherlands,1,1,2
+United Kingdom,Norway,0,1,1
+United Nations**,USA,115,0,115
+United Nations**,South Africa,115,0,115
+United Nations**,UAE,36,0,36
+United Nations**,Israel,3,0,3
+Uruguay,Spain,60,0,60
+Uruguay,Brazil,15,0,15
+Uruguay,Ecuador,7,0,7
+Uruguay,Chile,3,0,3
+Uruguay,Portugal,2,0,2
+Uruguay,Italy,2,0,2
+Uruguay,France,1,0,1
+USA,Sweden,525,2675,3200
+USA,Norway,3083,0,3083
+USA,Switzerland,752,0,752
+USA,Canada,752,0,752
+USA,Bulgaria,610,0,610
+USA,Germany,469,87,556
+USA,France,342,0,342
+USA,Italy,21,318,339
+USA,United Kingdom,13,244,257
+USA,Israel,253,0,253
+USA,Spain,37,0,37
+USA,Netherlands,29,4,33
+USA,Jordan,21,0,21
+USA,Czechia,21,0,21
+USA,South Africa,12,0,12
+USA,Australia,9,2,11
+Uzbekistan,USA,353,0,353
+Uzbekistan,Turkey,24,0,24
+Uzbekistan,France,16,0,16
+Uzbekistan,Russia,0,12,12
+Uzbekistan,Canada,8,0,8
+Uzbekistan,China,5,0,5
+Uzbekistan,Spain,4,0,4
+Vanuatu,Australia,0,1,1
+Venezuela,Russia,675,0,675
+Venezuela,China,524,1,525
+Venezuela,Germany,31,4,35
+Venezuela,Austria,30,0,30
+Venezuela,Netherlands,25,4,29
+Venezuela,Ukraine,21,0,21
+Venezuela,USA,16,0,16
+Venezuela,Switzerland,7,1,8
+Venezuela,Italy,7,1,8
+Venezuela,Spain,3,1,4
+Viet Nam,Russia,982,34,1016
+Viet Nam,Israel,608,0,608
+Viet Nam,Ukraine,38,0,38
+Viet Nam,Belarus,8,17,25
+Viet Nam,Unknown supplier(s),10,0,10
+Viet Nam,Canada,9,0,9
+Viet Nam,Slovakia,6,0,6
+Viet Nam,India,0,4,4
+Viet Nam,Czechia,4,0,4
+Viet Nam,Spain,3,0,3
+Viet Nam,"Korea, South",2,0,2
+Viet Nam,Indonesia,2,0,2
+Viet Nam,USA,1,0,1
+Western Sahara,Algeria,3,0,3
+Yemen,South Africa,250,0,250
+Yemen,UAE,148,0,148
+Yemen,Saudi Arabia,25,0,25
+Yemen,Unknown supplier(s),5,0,5
+Yemen,USA,1,0,1
+Zambia,China,146,0,146
+Zambia,Ukraine,12,0,12
+Zambia,Italy,6,2,8
+Zambia,USA,0,4,4
+Zambia,Russia,2,0,2
+Zambia,Israel,2,0,2

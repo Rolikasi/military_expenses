@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<body>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+    charset="utf-8"
+  ></script>
+  <script type="text/javascript" src="jquery.tipsy.js"></script>
+
+  <div id="container">
+    <p id="headline" class="hed">Headline</p>
+    <p class="dek">dek</p>
+    <p class="dek">dek</p>
+  </div>
+
+  <div class="menu">
+  <select id="selectoption" class="menuchoice" ></select>
+    <p id="total"> </p>
+
+  </div>
+
+  <div id="graphic"></div>
+  <div id="graphic2"></div>
+  <script>
+    //set the margins
+    var margin = { top: 50, right: 160, bottom: 30, left: 60 },
+      width = 900 - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom;
+      height2 = 300 - margin.top - margin.bottom;
+
+    //set dek and head to be as wide as SVG
+    d3.select("#dek").style("width", width + "px");
+    d3.select("#headline").style("width", width + "px");
+
+    //write out your source text here
+    var sourcetext = "Source: SIPRI";
+
+    // set the type of number here, n is a number with a comma, .2% will get you a percent, .2f will get you 2 decimal points
+    var NumbType = d3.format(".2f");
+
+    // color array
+    var orangescale = ["#EA6903", "#F2A568", "#8C3F02", "#F7C39A"];
+    //color function pulls from array of colors stored in color.js
+    var color = d3.scale.ordinal().range(orangescale);
+    //define the approx. number of x scale ticks
+    var xscaleticks = 8;
+
+    //defines a function to be used to append the title to the tooltip.  you can set how you want it to display here.
+    var maketip = function(d) {
+      var tip =
+        '<p class="tip3">' +
+        d.name +
+        '<p class="tip1">' +
+        NumbType(d.value) +
+        '</p> <p class="tip3">' +
+        formatDate(d.date) +
+        "</p>";
+      return tip;
+    };
+
+    //define your year format here, first for the x scale, then if the date is displayed in tooltips
+    var parseDate = d3.time.format("%m/%d/%y").parse;
+    var formatDate = d3.time.format("%b %d, '%y");
+
+    //create an SVGs
+    var svg = d3
+      .select("#graphic")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    //make a rectangle so there is something to click on
+    svg
+      .append("svg:rect")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("class", "plot");
+
+    var svg2 = d3
+      .select("#graphic2")
+      .append("svg") // Brushing context box container
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height2 + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg2
+      .append("svg:rect")
+      .attr("width", width)
+      .attr("height", height2)
+      .attr("class", "plot");
+
+    //make a clip path for the graph
+    var clip = svg
+      .append("svg:clipPath")
+      .attr("id", "clip")
+      .append("svg:rect")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("width", width)
+      .attr("height", height);
+
+    var clip2 = svg2
+      .append("svg:clipPath")
+      .attr("id", "clip2")
+      .append("svg:rect")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("width", width)
+      .attr("height", height2);
+    var suppliers = d3.csv("top_suppliers.csv", d => {
+      suppliers = d;
+    });
+    //suck in the data, store it in a value called formatted, run the redraw function
+    d3.csv("military_expenses2.csv", function(data) {
+      formatted = data;
+      function removeDuplicates(originalArray, prop) {
+        var newArray = [];
+        var lookupObject = {};
+
+        for (var i in originalArray) {
+          lookupObject[originalArray[i][prop]] = originalArray[i];
+        }
+
+        for (i in lookupObject) {
+          newArray.push(lookupObject[i]);
+        }
+        return newArray;
+      }
+      var menuitems = removeDuplicates(data, "Country");
+      var selectoption = d3.select("#selectoption");
+
+      selectoption
+        .selectAll("option")
+        .data(menuitems)
+        .enter()
+        .append("option")
+        .attr("value", d => d.Country)
+        .append("span")
+        .attr("id", d => "choice-" + d.Country)
+        .text(d => d.Country);
+
+      redraw();
+    });
+    // force data to update when menu is changed
+    var menu = d3.select("#selectoption").on("change", change);
+
+    d3.select(window)
+      .on("keydown", function() {
+        altKey = d3.event.altKey;
+      })
+      .on("keyup", function() {
+        altKey = false;
+      });
+    var altKey;
+
+    // set terms of transition that will take place
+    // when a new economic indicator is chosen
+    function change() {
+      d3.transition()
+        .duration(altKey ? 7500 : 1500)
+        .each(redraw);
+    }
+
+    // define visible props
+    var isVisible = {
+      USA: false,
+      China: false,
+      Russia: false,
+      millions: true
+    };
+
+
+    // all the meat goes in the redraw function
+    function redraw() {
+      // create data nests based on economic indicator (series)
+      console.log(suppliers);
+      var nested = d3
+        .nest()
+        .key(function(d) {
+          return d.Country;
+        })
+        .map(formatted);
+      console.log("nested:", nested);
+      var nested2 = d3
+        .nest()
+        .key(function(d) {
+          return d.Recipent;
+        })
+        .map(suppliers);
+      console.log("nested2:", nested2);
+
+      // get value from menu selection
+      // the option values are set in HTML and correspond
+      //to the [type] value we used to nest the data
+      var series = menu.property("value");
+        var test = $("#choice-" + series);
+        console.log('test', test)
+      //update width of menu based on value
+      //var menuUpdate = d3.transition(series);
+      //menuUpdate
+      //.select('#selectoption')
+      //.style("width", width);
+
+
+      // only retrieve data from the selected series, using the nest we just created
+      var data = nested[series];
+      var data2 = nested2[series];
+      console.log("data2:", data2);
+      console.log("data:", data[0]);
+      // for object constancy we will need to set "keys", one for each type of data (column name) exclude all others.
+      color.domain(
+        d3.keys(data[0]).filter(function(key) {
+          return data[0].Country == "China" || "Russia" || "USA"
+            ? key !== "date" && key !== "Country" && key !== data[0].Country
+            : key !== "date" && key !== "Country";
+        })
+      );
+      var linedata = color.domain().map(function(name) {
+        return {
+          name: name == "millions" ? data[0].Country : name,
+          visible: isVisible[name],
+          values: data.map(function(d) {
+            return {
+              name: name == "millions" ? data[0].Country : name,
+              date: new Date(d.date),
+              value: parseFloat(d[name], 10)
+            };
+          })
+        };
+      });
+
+      console.log("linedata:", linedata);
+      var mainbardata = linedata.slice(0,1);
+      console.log("main data: ", mainbardata);
+      var linedata2 = linedata.slice(1);
+      console.log("linedata2:", linedata2);
+      bardata = data2.map(d => {
+        return {
+          supplier: d.Supplier,
+          total: parseFloat(d.total, 10),
+          delievered: parseFloat(d.delievered, 10),
+          delievery_planned: parseFloat(d.delievery_planned, 10)
+        }
+      }).slice(0,5);
+      console.log("bardata:", bardata);
+
+      // Transpose the data into layers
+      var transbardata = bardata.map((d,i) => {
+        return {
+          x: 'supplier' + i, y: d.delievery_planned, y0: d.delievered, z: d.supplier
+        }
+      });
+      console.log("transbardata:", transbardata);
+
+      var totalvalue = linedata[0].values
+        .reduce((acc, curr) => acc + (isNaN(curr.value)? 0 : curr.value), 0)
+        .toFixed(1);
+      var total = d3
+        .select("#total")
+        .text(" " + "spent " + totalvalue + "$ millions for 5 years");
+        var totalUpdate = d3.transition(total);
+        totalUpdate
+        .select("text")
+        .text(" spent " + totalvalue + "$ millions for 5 years");
+
+      //make an empty variable to stash the last values into so i can sort the legend
+      var lastvalues = [];
+
+      //setup the x and y scales
+      var x = d3.time
+        .scale()
+        .domain([
+          d3.min(linedata, function(c) {
+            return d3.min(c.values, function(v) {
+              return v.date;
+            });
+          }),
+          d3.max(linedata, function(c) {
+            return d3.max(c.values, function(v) {
+              console.log("v.date", v.date)
+              return v.date;
+            });
+          })
+        ])
+        .range([30, width])
+        .nice();
+
+      var y2 = d3.scale
+        .ordinal()
+        .domain(
+          bardata.map(function(d, i) {
+            return "supplier" + i;
+          })
+        )
+        .rangeRoundBands([0, height2], 0.1);
+
+      var maxy = findMaxY(linedata);
+      var y = d3.scale
+        .linear()
+        .domain([0, maxy + maxy * 0.15])
+        .range([height, 0]);
+
+      var maxx2 = findMaxX2(bardata);
+      console.log('maxx2', maxx2);
+      var x2 = d3.scale
+      .linear()
+      .domain([0, maxx2 + (maxx2*.15)])
+      .range([0, width]);
+
+      //create and draw the x axis
+      var xAxis = d3.svg
+        .axis()
+        .scale(x)
+        .orient("bottom")
+        .tickPadding(8)
+        .ticks(xscaleticks);
+
+      svg.append("svg:g").attr("class", "x axis");
+
+      var yAxis2 = d3.svg
+        .axis()
+        .scale(y2)
+        .orient("left");
+
+      svg2.append("svg:g").attr("class", "y axis2");
+
+      //create and draw the y axis
+      var yAxis = d3.svg
+        .axis()
+        .scale(y)
+        .orient("left")
+        .tickSize(0 - width)
+        .tickPadding(8);
+
+      svg.append("svg:g").attr("class", "y axis");
+
+      var xAxis2 = d3.svg
+        .axis()
+        .scale(x2)
+        .orient("top")
+
+      svg2.append("svg:g").attr("class", "x axis2");
+
+      //will draw the line
+      var line = d3.svg
+        .line()
+        .defined(d => d.value !== 0)
+        .x(function(d) {
+          return x(d.date);
+        })
+        .y(function(d) {
+          return y(d.value);
+        });
+
+        var bar = svg2.selectAll("g.bar").data(transbardata);
+        var barEnter = bar
+      .enter().append("g")
+      .attr("class", "bar")
+      barEnter
+      .append('rect')
+      .attr("id", "delivered")
+      .attr("y", function(d) { return y2(d.x); })
+      .attr("height", 25.2)
+      .attr("x", function(d) { return x2(0); })
+      .attr("width", function(d) { return x2(d.y0); })
+      .style("fill", orangescale[0]);
+      barEnter
+      .append('rect')
+      .attr("id", "planned")
+      .attr("y", function(d) { return y2(d.z); })
+      .attr("height", 25.2)
+      .attr("x", function(d) { return x2(d.y0); })
+      .attr("width", function(d) { return x2(d.y); })
+      .style("fill", orangescale[1]);
+
+      barEnter
+      .append("text")
+      .attr("class", "legend")
+      .attr("x", function(d) { return x2(d.y0 + d.y); })
+      .attr("y", function(d) {return y2(d.x)})
+      .attr("dx", "1em")
+      .attr("dy", "1.2em")
+      .text(function(d) { return d.z; });
+
+        //add last prop delete
+      d3.selection.prototype.last = function() {
+        var last = this.size() - 1;
+        return d3.select(this[0][last]);
+      };
+
+
+        var count = svg2.selectAll(".bar")[0].length - bar[0].length
+        console.log(count)
+        for(var i=0; i < count; i++){
+          var deleteBars = svg2.selectAll(".bar");
+          deleteBars.last().remove();
+        }
+
+
+      var barUpdate = d3.transition(bar);
+      barUpdate.selectAll("#delivered")
+      .attr("y", function(d) { return y2(d.x); })
+      .attr("height", 25.2)
+      .attr("x", function(d) { return x2(0); })
+      .attr("width", function(d,i) { return x2(transbardata.filter(c => c.x == d.x)[0].y0); })
+      barUpdate.selectAll("#planned")
+      .attr("y", function(d) { return y2(d.x); })
+      .attr("height", 25.2)
+      .attr("x", function(d) { return x2(transbardata.filter(c => c.x == d.x)[0].y0); })
+      .attr("width", function(d) { return x2(transbardata.filter(c => c.x == d.x)[0].y); })
+      barUpdate.selectAll('text')
+      .attr("x", function(d) { return x2(transbardata.filter(c => c.x == d.x)[0].y0 + transbardata.filter(c => c.x == d.x)[0].y); })
+      .attr("y", function(d) {return y2(transbardata.filter(c => c.x == d.x)[0].x)})
+      .text(function(d) { return transbardata.filter(c => c.x == d.x)[0].z; });
+
+
+
+
+        // append bar for main country
+        console.log("mainbardata[0].values ", mainbardata[0].values)
+        var mainbardatarect = mainbardata[0].values;
+        var mainbar = svg.selectAll('.mainbar').data(mainbardatarect);
+
+        var mainbarEnter = mainbar
+        .enter()
+        .append('g')
+        .attr("id", mainbardatarect.name + "-bar")
+        .attr("class", "mainbar");
+        mainbarEnter
+        .append("rect")
+        .attr("class", "mainrect")
+        .attr("y", function(d) { return y(d.value); })
+        .attr("height", d => { return height - y(d.value)})
+        .attr("x", function(d) { return x(d.date) - 12; })
+        .attr("width", 25)
+        .attr("fill", orangescale[0]);
+
+        mainbarEnter
+        .append('text')
+        .attr("class", "barvalue")
+        .attr("x", function(d) { return x(d.date); })
+        .attr("y", function(d) {return y(d.value)})
+        .attr("dx", "-1em")
+        .attr("dy", "-0.5em")
+        .attr("display", "true")
+        .text(d => isNaN(d.value) ? 'no data' : d.value);
+
+        var count = svg.selectAll(".mainrect")[0].length - mainbar[0].length
+        console.log(count)
+        for(var i=0; i < count; i++){
+          var deleteBars = svg.selectAll("rect");
+          var deleteText = svg.selectAll(".barvalue")
+          deleteBars.last().transition().duration(1000).attr("height", 0);
+          deleteText.last().transition().duration(1000).attr("display", "none");
+        }
+
+        var mainbarUpdate = d3.transition(mainbar);
+        mainbarUpdate
+        .attr("id", function(d) {
+          return d.name + "-bar";
+        })
+        .select('.mainrect')
+        .attr("y", function(d) {return y(d.value); })
+        .attr("height", function(d) { return  height - y(d.value); })
+        .attr("x", function(d) {return x(d.date) - 12; })
+        mainbarUpdate
+        .select(".barvalue")
+        .attr("x", function(d) { return x(d.date); })
+        .attr("y", d => isNaN(d.value) ? height - 3 : y(d.value))
+        .attr("display", "true")
+        .text(d => isNaN(d.value) ? 'no data' : d.value);
+
+
+         //bind the data
+      var thegraph = svg.selectAll(".thegraph").data(linedata2);
+
+//append a g tag for each line and set of tooltip circles and give it a unique ID based on the column name of the data
+var thegraphEnter = thegraph
+  .enter()
+  .append("g")
+  .attr("clip-path", "url(#clip)")
+  .attr("class", "thegraph")
+  .attr("id", function(d) {
+    return d.name + "-line";
+  })
+  .style("stroke-width", 2.5)
+  .on("mouseover", function(d) {
+    d3.select(this) //on mouseover of each line, give it a nice thick stroke
+      .style("stroke-width", "6px");
+
+    var selectthegraphs = $(".thegraph").not(this); //select all the rest of the lines, except the one you are hovering on and drop their opacity
+    d3.selectAll(selectthegraphs).style("opacity", 0.2);
+
+    var getname = document.getElementById(d.name); //use get element cause the ID names have spaces in them
+    var selectlegend = $(".legend").not(getname); //grab all the legend items that match the line you are on, except the one you are hovering on
+    d3.select(getname).attr("class", "legend-select"); //change the class on the legend name that corresponds to hovered line to be bolder
+  })
+  .on("mouseout", function(d) {
+    //undo everything on the mouseout
+    d3.select(this).style("stroke-width", "2.5px");
+
+    var selectthegraphs = $(".thegraph").not(this);
+    d3.selectAll(selectthegraphs).style("opacity", 1);
+
+    var getname = document.getElementById(d.name);
+    var getname2 = $('.legend[fakeclass="fakelegend"]');
+    var selectlegend = $(".legend")
+      .not(getname2)
+      .not(getname);
+
+    d3.selectAll(selectlegend).style("opacity", 1);
+
+    d3.select(getname).attr("class", "legend");
+  });
+
+//actually append the line to the graph
+thegraphEnter
+  .append("path")
+  .attr("class", "line")
+  .style("stroke", function(d) {
+    return color(d.name);
+  })
+  .attr("d", function(d) {
+    return line(d.values[0]);
+  })
+  .transition()
+  .duration(2000)
+  .attrTween("d", function(d) {
+    var interpolate = d3.scale
+      .quantile()
+      .domain([0, 1])
+      .range(d3.range(1, d.values.length + 1));
+    return function(t) {
+      return d.visible && (d.name=="USA" || d.name == "Russia" || d.name == "China") ? line(d.values.slice(0, interpolate(t))) : null;
+    };
+  });
+      //then append some 'nearly' invisible circles at each data point
+      thegraph
+        .selectAll("circle")
+        .data(d => d.values)
+        .enter()
+        .append("circle")
+        .attr("class", "tipcircle")
+        .attr("cx", function(d, i) {
+          return x(d.date);
+        })
+        .attr("cy", function(d, i) {
+
+          return y(d.value);
+        })
+        .attr("r", 5)
+        .attr("opacity", 1e-6)
+        .attr("fill", d => color(d.name)) //1e-6
+        .attr("title", maketip)
+
+        thegraph
+        .selectAll("text")
+        .data(d => d.visible
+        ?d.values
+        :false)
+        .enter()
+        .append("text")
+        .attr("class", "circlevalue")
+        .attr("x", function(d) {
+          return x(d.date);
+        })
+        .attr("y", function(d) {
+          return y(d.value);
+        })
+        .text(d => d.value)
+
+
+      //append the legend
+
+      var legend = svg.selectAll(".legend").data(linedata);
+
+      var legendEnter = legend
+        .enter()
+        .append("g")
+        .attr("class", "legend")
+        .attr("id", function(d) {
+          return d.name;
+        });
+
+      //create a scale to pass the legend items through
+      var legendscale = d3.scale
+        .ordinal()
+        .domain(lastvalues)
+        .range([0, 30, 60, 90, 120, 150, 180, 210]);
+
+      //actually add the circles to the created legend container
+      legendEnter
+        .append("circle")
+        .attr("cx", width + 20)
+        .attr("cy", function(d) {
+          return legendscale(d.values[d.values.length - 1].value);
+        })
+        .attr("r", 7)
+        .attr("fill", function(d) {
+          return d.visible ? color(d.name) : "#F1F1F2";
+        })
+        .on("click", d => {
+          isVisible[d.name] = !isVisible[d.name];
+          change();
+        });
+
+      //add the legend text
+      legendEnter
+        .append("text")
+        .attr("x", width + 35)
+        .attr("y", function(d) {
+          return legendscale(d.values[d.values.length - 1].value);
+        })
+        .text(function(d) {
+          return d.name;
+        });
+
+      // set variable for updating visualization
+
+
+
+
+
+      var thegraphUpdate = d3.transition(thegraph);
+
+        thegraphUpdate.attr("id", function(d) {
+          return d.name + "-line";
+        });
+      // change values of path and then the circles to those of the new series
+      thegraphUpdate.select("path").attr("d", function(d) {
+        return d.visible && (d.name=="USA" || d.name == "Russia" || d.name == "China") ? line(d.values) : null;
+      })
+      thegraphUpdate
+        .selectAll("circle")
+        .attr("title", maketip)
+        .attr("cy", (d,i) => {return y(d.value)})
+        .attr("cx", d => x(d.date));
+
+        console.log("extra circle", thegraph[0].length)
+        console.log("extra circle current", svg.selectAll(".circlevalue")[0].length);
+        var count = svg.selectAll(".tipcircle")[0].length - mainbar[0].length
+        console.log(count)
+        for(var i=0; i < count; i++){
+          var deleteBars = svg.selectAll("circle");
+          var deleteText = svg.selectAll(".circlevalue")
+          deleteBars.last().transition().duration(1000).attr("height", 0);
+          deleteText.last().transition().duration(1000).attr("display", "none");
+        }
+
+        thegraphUpdate
+        .selectAll(".circlevalue")
+        .attr("x", function(d) { return x(d.date); })
+        .attr("y", function(d) {return y(d.value)})
+        .attr("display", "none")
+        .text(function(d) {
+          return d.value;
+        });
+      // and now for legend items
+      var legendUpdate = d3.transition(legend);
+
+
+      var deletelast = svg.selectAll(".legend");
+      svg.selectAll(".legend")[0].length - legend[0].length === 1
+        ? deletelast.last().remove()
+        : null; //delete last element if China or USA or Russia is choosen
+      legendUpdate.attr("class", "legend").attr("id", function(d) {
+        return d.name;
+      });
+
+      legendUpdate
+        .select("circle")
+        .attr("fill", function(d) {
+          return d.visible ? color(d.name) : "#F1F1F2";
+        })
+        .attr("cy", function(d, i) {
+          return legendscale(d.values[d.values.length - 1].value);
+        });
+
+      legendUpdate
+        .select("text")
+        .attr("y", function(d) {
+          return legendscale(d.values[d.values.length - 1].value);
+        })
+        .text(function(d) {
+          return d.name;
+        });
+
+      // update the axes,
+      d3.transition(svg)
+        .select(".y.axis")
+        .call(yAxis);
+
+      d3.transition(svg)
+        .select(".x.axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+      d3.transition(svg2)
+        .select(".y.axis2")
+        .call(yAxis2);
+
+      d3.transition(svg2)
+        .select(".x.axis2")
+        .attr("transform", "translate(0," + 0 + ")")
+        .call(xAxis2);
+
+      //make my tooltips work
+      //$("circle").tipsy({ opacity: 0.9, gravity: "n", html: true });
+
+      //define the zoom function
+
+      //end of the redraw function
+    }
+    function findMaxY(data) {
+      // Define function "findMaxY"
+      var maxYValues = data.map(function(d) {
+        if (d.visible) {
+          return d3.max(d.values, function(value) {
+            // Return max rating value
+            return value.value;
+          });
+        }
+      });
+      return d3.max(maxYValues);
+    }
+    function findMaxX2(data) {
+      // Define function "findMaxY"
+      var maxYValues = data.map(function(d) {
+          return d.total;
+        }
+      );
+      return d3.max(maxYValues);
+    }
+    svg2
+      .append("svg:text")
+      .attr("text-anchor", "start")
+      .attr("x", 0 - margin.left)
+      .attr("y", height + margin.bottom - 10)
+      .text(sourcetext)
+      .attr("class", "source");
+</script>
+</body>
