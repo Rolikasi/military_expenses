@@ -282,7 +282,7 @@ totalunits == 0
 .style("margin-top", "5pt");
 
 d3.select("#dek")
-.text("Top suppluers")
+.text("Top suppliers")
 .style("font-family", "SourceSansPro-Bold")
 .style("font-size", "25pt")
 .style("margin-top", "15pt");
