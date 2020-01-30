@@ -1,24 +1,33 @@
 Recipent,Supplier,delievered,delievery_planned,total
-Afghanistan,USA,25,15,40
-Afghanistan,Canada,16,16,32
-Afghanistan,Russia,15,15,30
-Afghanistan,Brazil,10,16,26
+Afghanistan,USA,4747,254,5001
+Afghanistan,Canada,32,0,32
+Afghanistan,Russia,30,0,30
+Afghanistan,Brazil,26,0,26
 Afghanistan,Switzerland,18,0,18
 Afghanistan,China,10,0,10
 Afghanistan,India,7,0,7
 Afghanistan,Belarus,0,4,4
 African Union**,USA,20,0,20
 African Union**,Israel,3,0,3
-Albania,USA,30,50,80
-Albania,Russia,8,0,8
-Albania,Brazil,2,2,4
-Albania,Switzerland,2,0,2
-Albania,Canada,1,1,2
+Albania,USA,80,0,80
+Albania,Italy,8,0,8
+Albania,France,4,0,4
+Albania,Germany,2,0,2
+Algeria,Russia,6675,275,6950
+Algeria,Germany,305,689,994
+Algeria,UAE,204,6,210
+Algeria,China,209,0,209
+Algeria,South Africa,200,0,200
+Algeria,Italy,99,1,100
+Algeria,Sweden,71,0,71
+Algeria,Ukraine,55,0,55
+Algeria,USA,24,3,27
 Algeria,France,5,10,15
 Algeria,Poland,8,0,8
 Algeria,United Kingdom,6,0,6
-Algeria,Italy,6,2,8
-Algeria,Angola,0,6,6
+Algeria,Netherlands,3,0,3
+Algeria,Finland,2,0,2
+Algeria,Denmark,2,0,2
 Angola,Belarus,88,0,88
 Angola,Bulgaria,84,0,84
 Angola,China,60,0,60
@@ -36,10 +45,31 @@ Argentina,Sweden,50,100,150
 Argentina,USA,42,15,57
 Argentina,Italy,32,0,32
 Argentina,France,19,4,23
+Argentina,Canada,11,9,20
+Argentina,Germany,10,0,10
+Argentina,Austria,3,0,3
+Argentina,Switzerland,1,0,1
 Armenia,Russia,536,0,536
 Australia,USA,7267,4604,11871
 Australia,France,380,12,392
 Australia,Germany,22,307,329
+Australia,Ireland,214,0,214
+Australia,Canada,28,24,52
+Australia,Switzerland,25,24,49
+Australia,United Kingdom,21,9,30
+Australia,Denmark,0,12,12
+Australia,Italy,10,0,10
+Australia,Spain,4,3,7
+Australia,Sweden,2,0,2
+Australia,Austria,2,0,2
+Australia,Norway,0,1,1
+Australia,Israel,0,1,1
+Austria,Germany,40,24,64
+Austria,USA,10,22,32
+Austria,Sweden,10,22,32
+Austria,Italy,23,0,23
+Austria,Belgium,7,0,7
+Austria,Israel,0,1,1
 Azerbaijan,Russia,2494,0,2494
 Azerbaijan,Israel,1091,42,1133
 Azerbaijan,Turkey,173,20,193
@@ -109,7 +139,7 @@ Brazil,Switzerland,24,0,24
 Brazil,Norway,20,0,20
 Brazil,Canada,2,4,6
 Brazil,Spain,1,2,3
-Brazil,"Korea, South",0,2,2
+Brazil,South Korea,0,2,2
 Brunei,USA,12,0,12
 Brunei,France,10,0,10
 Brunei,Sweden,1,0,1
@@ -147,7 +177,7 @@ Canada,Spain,0,16,16
 Canada,United Kingdom,0,15,15
 Canada,Switzerland,12,0,12
 Canada,Greece,1,0,1
-Central African Rep.,China,12,0,12
+Central African Rep,China,12,0,12
 Chad,Israel,11,0,11
 Chad,USA,6,0,6
 Chad,Ukraine,6,0,6
@@ -172,7 +202,7 @@ Colombia,Israel,425,0,425
 Colombia,USA,314,10,324
 Colombia,Italy,201,0,201
 Colombia,Canada,44,0,44
-Colombia,"Korea, South",20,11,31
+Colombia,South Korea,20,11,31
 Colombia,Germany,21,0,21
 Colombia,United Kingdom,18,0,18
 Colombia,Netherlands,12,0,12
@@ -181,13 +211,6 @@ Colombia,Finland,4,0,4
 Colombia,Portugal,2,0,2
 Colombia,Dominican Rep.,2,0,2
 Colombia,France,1,0,1
-"Congo, Dem. Rep.",Ukraine,25,0,25
-"Congo, Dem. Rep.",Bulgaria,12,0,12
-"Congo, Dem. Rep.",China,5,0,5
-"Congo, Republic of ",UAE,36,0,36
-"Congo, Republic of ",South Africa,29,0,29
-"Congo, Republic of ",United Kingdom,28,0,28
-"Congo, Republic of ",Russia,2,0,2
 Costa Rica,USA,2,0,2
 Côte d’Ivoire,Belarus,10,0,10
 Côte d’Ivoire,Sweden,9,0,9
@@ -225,6 +248,9 @@ Djibouti,Unknown supplier(s),4,0,4
 Djibouti,China,4,0,4
 Djibouti,Canada,2,0,2
 Dominican Rep.,USA,6,0,6
+DR Congo,Ukraine,25,0,25
+DR Congo,Bulgaria,12,0,12
+DR Congo,China,5,0,5
 Ecuador,France,13,0,13
 Ecuador,Spain,7,0,7
 Ecuador,Netherlands,6,0,6
@@ -243,7 +269,7 @@ Egypt,South Africa,14,0,14
 Egypt,Italy,6,3,9
 Egypt,Finland,8,0,8
 Egypt,Bulgaria,2,0,2
-Egypt,"Korea, South",1,0,1
+Egypt,South Korea,1,0,1
 El Salvador,Chile,10,0,10
 El Salvador,Israel,2,0,2
 Equatorial Guinea,South Africa,25,0,25
@@ -256,7 +282,7 @@ Estonia,USA,240,2,242
 Estonia,Netherlands,131,0,131
 Estonia,France,86,17,103
 Estonia,Norway,0,35,35
-Estonia,"Korea, South",0,12,12
+Estonia,South Korea,0,12,12
 Ethiopia,Ukraine,143,0,143
 Ethiopia,Israel,75,0,75
 Ethiopia,China,20,0,20
@@ -268,7 +294,7 @@ Finland,Sweden,1508,1,1509
 Finland,USA,776,14,790
 Finland,Denmark,706,0,706
 Finland,Netherlands,88,28,116
-Finland,"Korea, South",5,43,48
+Finland,South Korea,5,43,48
 Finland,United Kingdom,28,0,28
 Finland,Norway,16,0,16
 Finland,Italy,13,0,13
@@ -320,7 +346,7 @@ Guinea,South Africa,32,0,32
 Guinea,France,6,0,6
 Guyana,Unknown supplier(s),2,0,2
 Guyana,Brazil,2,0,2
-Hamas (Palestine)*,North Korea,25,0,25
+Hamas Palestine*,North Korea,25,0,25
 Honduras,Taiwan,4,0,4
 Honduras,USA,3,0,3
 Honduras,Unknown supplier(s),2,0,2
@@ -331,7 +357,7 @@ Hungary,Germany,2,100,102
 Hungary,Czechia,4,0,4
 Hungary,Russia,3,0,3
 Hungary,Sweden,1,0,1
-Huthi rebels (Yemen)*,Iran,10,0,10
+Huthi rebels Yemen*,Iran,10,0,10
 India,Russia,46766,32042,78808
 India,France,22417,575,22992
 India,Germany,22201,520,22721
@@ -341,7 +367,7 @@ India,United Kingdom,445,141,586
 India,South Africa,200,50,250
 India,Canada,77,122,199
 India,Ukraine,92,32,124
-India,"Korea, South",10,90,100
+India,South Korea,10,90,100
 India,Switzerland,75,0,75
 India,Spain,0,56,56
 India,Italy,10,24,34
@@ -354,7 +380,7 @@ Indonesia,USA,486,273,759
 Indonesia,France,476,89,565
 Indonesia,United Kingdom,508,0,508
 Indonesia,Germany,251,27,278
-Indonesia,"Korea, South",156,85,241
+Indonesia,South Korea,156,85,241
 Indonesia,Belgium,191,50,241
 Indonesia,China,160,6,166
 Indonesia,Australia,12,50,62
@@ -385,7 +411,7 @@ Iraq,Unknown supplier(s),110,0,110
 Iraq,South Africa,80,0,80
 Iraq,China,44,0,44
 Iraq,Iran,29,0,29
-Iraq,"Korea, South",24,0,24
+Iraq,South Korea,24,0,24
 Iraq,Estonia,12,0,12
 Iraq,Belarus,9,0,9
 Iraq,Slovenia,8,0,8
@@ -453,13 +479,6 @@ Kenya,Jordan,3,0,3
 Kenya,Italy,0,3,3
 Kenya,Montenegro,1,0,1
 Kiribati,Australia,0,1,1
-"Korea, South",USA,2588,1240,3828
-"Korea, South",Germany,1475,276,1751
-"Korea, South",France,10,214,224
-"Korea, South",Israel,123,3,126
-"Korea, South",Sweden,28,0,28
-"Korea, South",United Kingdom,11,13,24
-"Korea, South",Spain,1,3,4
 Kosovo,Turkey,10,0,10
 Kuwait,USA,874,339,1213
 Kuwait,France,120,330,450
@@ -523,7 +542,7 @@ Malaysia,Netherlands,8,24,32
 Malaysia,Thailand,20,0,20
 Malaysia,Italy,0,12,12
 Malaysia,Unknown supplier(s),9,0,9
-Malaysia,"Korea, South",2,6,8
+Malaysia,South Korea,2,6,8
 Malaysia,Sweden,0,6,6
 Malaysia,Denmark,6,0,6
 Malaysia,Switzerland,5,0,5
@@ -617,7 +636,7 @@ New Zealand,France,9,0,9
 New Zealand,Israel,6,0,6
 New Zealand,Netherlands,0,2,2
 New Zealand,United Kingdom,0,1,1
-New Zealand,"Korea, South",0,1,1
+New Zealand,South Korea,0,1,1
 Nicaragua,Russia,138,0,138
 Niger,South Africa,21,0,21
 Niger,China,20,0,20
@@ -645,7 +664,7 @@ Norway,Sweden,110,0,110
 Norway,Italy,72,4,76
 Norway,Netherlands,44,0,44
 Norway,Germany,3,31,34
-Norway,"Korea, South",1,24,25
+Norway,South Korea,1,24,25
 Norway,France,8,12,20
 Norway,Finland,2,0,2
 Oman,USA,998,400,1398
@@ -688,7 +707,7 @@ Peru,Israel,182,0,182
 Peru,Canada,64,0,64
 Peru,USA,50,0,50
 Peru,New Zealand,42,4,46
-Peru,"Korea, South",26,3,29
+Peru,South Korea,26,3,29
 Peru,China,27,0,27
 Peru,Russia,24,0,24
 Peru,France,17,0,17
@@ -699,7 +718,7 @@ Philippines,USA,227,75,302
 Philippines,Israel,130,47,177
 Philippines,Germany,0,130,130
 Philippines,Jordan,0,62,62
-Philippines,"Korea, South",13,11,24
+Philippines,South Korea,13,11,24
 Philippines,Belgium,24,0,24
 Philippines,Canada,6,6,12
 Philippines,Italy,10,0,10
@@ -712,7 +731,7 @@ Philippines,Spain,3,0,3
 Philippines,United Kingdom,0,2,2
 Philippines,Sweden,0,2,2
 Philippines,France,0,2,2
-PKK (Turkey)*,Unknown supplier(s),10,0,10
+PKK Turkey*,Unknown supplier(s),10,0,10
 Poland,USA,157,2730,2887
 Poland,Israel,400,600,1000
 Poland,Sweden,860,92,952
@@ -720,7 +739,7 @@ Poland,Finland,860,92,952
 Poland,Italy,324,1,325
 Poland,Germany,204,89,293
 Poland,United Kingdom,34,86,120
-Poland,"Korea, South",32,88,120
+Poland,South Korea,32,88,120
 Poland,Norway,88,14,102
 Poland,Ukraine,40,0,40
 Poland,Canada,12,0,12
@@ -731,7 +750,7 @@ Portugal,Denmark,22,1,23
 Portugal,Italy,1,4,5
 Portugal,Brazil,0,5,5
 Portugal,Finland,0,4,4
-PRC (Israel/Palestine)*,North Korea,25,0,25
+PRC Israel*Palestine*,North Korea,25,0,25
 Qatar,USA,1484,7334,8818
 Qatar,France,624,1454,2078
 Qatar,Ukraine,700,0,700
@@ -745,6 +764,10 @@ Qatar,Canada,25,0,25
 Qatar,Switzerland,24,0,24
 Qatar,Pakistan,8,0,8
 Qatar,Norway,0,3,3
+Republic of Congo,UAE,36,0,36
+Republic of Congo,South Africa,29,0,29
+Republic of Congo,United Kingdom,28,0,28
+Republic of Congo,Russia,2,0,2
 Romania,Israel,457,543,1000
 Romania,USA,118,484,602
 Romania,Switzerland,53,217,270
@@ -772,7 +795,7 @@ Saudi Arabia,Turkey,670,0,670
 Saudi Arabia,Belgium,84,238,322
 Saudi Arabia,Netherlands,225,0,225
 Saudi Arabia,Spain,107,5,112
-Saudi Arabia,"Korea, South",100,0,100
+Saudi Arabia,South Korea,100,0,100
 Saudi Arabia,Georgia,100,0,100
 Saudi Arabia,South Africa,75,0,75
 Saudi Arabia,Sweden,73,0,73
@@ -792,7 +815,7 @@ Senegal,France,28,2,30
 Senegal,Turkey,25,0,25
 Senegal,Sweden,9,0,9
 Senegal,Ukraine,8,0,8
-Senegal,"Korea, South",0,4,4
+Senegal,South Korea,0,4,4
 Senegal,Czechia,0,4,4
 Senegal,Canada,0,4,4
 Senegal,Slovakia,3,0,3
@@ -830,6 +853,13 @@ South Africa,Sweden,0,264,264
 South Africa,Finland,0,238,238
 South Africa,United Kingdom,20,0,20
 South Africa,Russia,1,0,1
+South Korea,USA,2588,1240,3828
+South Korea,Germany,1475,276,1751
+South Korea,France,10,214,224
+South Korea,Israel,123,3,126
+South Korea,Sweden,28,0,28
+South Korea,United Kingdom,11,13,24
+South Korea,Spain,1,3,4
 South Sudan,China,1200,0,1200
 South Sudan,UAE,173,0,173
 South Sudan,Unknown supplier(s),51,0,51
@@ -887,7 +917,7 @@ Thailand,Israel,34,42,76
 Thailand,France,16,55,71
 Thailand,Italy,19,1,20
 Thailand,Sweden,12,4,16
-Thailand,"Korea, South",5,9,14
+Thailand,South Korea,5,9,14
 Thailand,Switzerland,12,0,12
 Thailand,Russia,4,4,8
 Thailand,Spain,1,1,2
@@ -912,7 +942,7 @@ Turkey,Israel,468,0,468
 Turkey,Germany,138,51,189
 Turkey,Russia,0,129,129
 Turkey,Italy,63,34,97
-Turkey,"Korea, South",52,18,70
+Turkey,South Korea,52,18,70
 Turkey,Pakistan,0,52,52
 Turkey,Canada,4,39,43
 Turkey,Netherlands,16,15,31
@@ -975,7 +1005,7 @@ United Kingdom,Canada,10,0,10
 United Kingdom,Finland,6,2,8
 United Kingdom,Brazil,5,0,5
 United Kingdom,Sweden,4,0,4
-United Kingdom,"Korea, South",3,1,4
+United Kingdom,South Korea,3,1,4
 United Kingdom,Netherlands,1,1,2
 United Kingdom,Norway,0,1,1
 United Nations**,USA,115,0,115
@@ -1033,7 +1063,7 @@ Viet Nam,Slovakia,6,0,6
 Viet Nam,India,0,4,4
 Viet Nam,Czechia,4,0,4
 Viet Nam,Spain,3,0,3
-Viet Nam,"Korea, South",2,0,2
+Viet Nam,South Korea,2,0,2
 Viet Nam,Indonesia,2,0,2
 Viet Nam,USA,1,0,1
 Western Sahara,Algeria,3,0,3
@@ -1048,3 +1078,4 @@ Zambia,Italy,6,2,8
 Zambia,USA,0,4,4
 Zambia,Russia,2,0,2
 Zambia,Israel,2,0,2
+No data,,,,

@@ -1,16 +1,22 @@
+p{
+  margin: 0;
+}
 .plot{
-    fill: #fff;
+    fill: #FFF4D5;
     }
     .axis path,
-    .axis line {
+    .axis line,
+    .axis2 path,
+    .axis2 line{
       fill: none;
-        stroke: #AFBABF;
+        stroke: #373E43;
         shape-rendering: crispEdges;
         }
-    .axis text {
+    .axis text,
+    .axis2 text {
         font-family:  SourceSansPro-Bold;
         font-size: 14px;
-        fill: #AFBABF;
+        fill: #373E43;
         }
 
     .x.axis path {
@@ -19,33 +25,30 @@
     .y.axis path{
       display: none;
       }
-    .y.axis2 text{
+    .y.axis2 text,
+    .y.axis2 path,
+    .x.axis2 path{
       display: none;
       }
-
+    .tick line{
+      opacity: 0.2;
+    }
     .line {
       fill: none;
       stroke: steelblue;
       stroke-linejoin: round;
       stroke-linecap:round;
     }
+    .menu{
+      margin-left: 20px;
+      font-family: SourceSansPro-Light;
+      font-size: 12pt;
+      fill: #121516;
 
-    .hed {
-        font-family: SourceSansPro-Bold;
-        font-size: 24pt;
-        margin-bottom:5px;
-        margin-top:0px;
-        }
-
-    .dek {
-        font-family: SourceSansPro-Light;
-        font-size: 12pt;
-        margin-bottom:0px;
-        margin-top:0px;
-        }
+    }
     .menuchoice {
-        font-family: SourceSansPro-Light;
-        font-size: 10pt;
+        font-family: SourceSansPro-Bold;
+        font-size: 20pt;
         margin-bottom:0px;
         fill: #231F20;
         margin-right: 3pt;
@@ -54,32 +57,41 @@
         -webkit-appearance:none; /* Safari and Chrome */
         appearance:none;
     }
-    .menu {
-      display: flex;
+    .menuchoice option{
+      font-family: SourceSansPro-Light;
+      font-size: 10pt;
     }
-    .legend {
+
+    .legend,
+    .source {
         font-family: SourceSansPro-Light;
         font-size: 10pt;
         margin-bottom:0px;
-        fill: #231F20;
+        fill: #121516;
         }
-    .barvalue {
+    .logo{
+      width: 140px;
+
+    }
+    .barvalue,
+    .delbarvalue,
+    .planbarvalue {
       font-family: SourceSansPro-Light;
-      font-size: 10pt;
+      font-size: 14px;
       margin-bottom:0px;
-      fill: #231F20;
+      fill: #24292D;
           }
     .legend-off {
         font-family: SourceSansPro-Light;
         font-size: 10pt;
         margin-bottom:0px;
-        fill: #231F20;
+        fill: #24292D;
         }
     .legend-select {
         font-family: SourceSansPro-Bold;
         font-size: 10pt;
         margin-bottom:0px;
-        fill: #231F20;
+        fill: #24292D;
         }
     .tip1 {
         font-family: SourceSansPro-Bold;
