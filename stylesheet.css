@@ -2,7 +2,7 @@ p{
   margin: 0;
 }
 .plot{
-    fill: #FFF4D5;
+    fill: #FFFFFF;
     }
     .axis path,
     .axis line,
@@ -42,13 +42,13 @@ p{
     .menu{
       margin-left: 20px;
       font-family: SourceSansPro-Light;
-      font-size: 12pt;
+      font-size: 13pt;
       fill: #121516;
 
     }
     .menuchoice {
         font-family: SourceSansPro-Bold;
-        font-size: 20pt;
+        font-size: 25pt;
         margin-bottom:0px;
         fill: #231F20;
         margin-right: 3pt;

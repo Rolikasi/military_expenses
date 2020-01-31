@@ -4,7 +4,7 @@ width = 900 - margin.left - margin.right,
 height = 500 - margin.top - margin.bottom;
 height2 = 300 - margin.top - margin.bottom;
 
-d3.select("body").style("width", width + margin.left + margin.right + "px").style("background-color", "#FFF4D5")
+d3.select("body").style("width", width + margin.left + margin.right + "px");//.style("background-color", "#DEE1E2")
 
 //write out your source text here
 var sourcetext = "B. Edil | Source: SIPRI";
@@ -34,7 +34,7 @@ var svg = d3
 .select("#graphic")
 .style("width", width + margin.left + margin.right + "px")
 .append("svg")
-.style("background-color", "#FFF4D5")
+//.style("background-color", "#FFF4D5")
 .attr("width", width + margin.left + margin.right)
 .attr("height", height + margin.top + margin.bottom)
 .append("g")
@@ -51,7 +51,7 @@ var svg2 = d3
 .select("#graphic2")
 .style("width", width + margin.left + margin.right + "px")
 .append("svg")
-.style("background-color", "#FFF4D5") // Brushing context box container
+//.style("background-color", "#FFF4D5") // Brushing context box container
 .attr("width", width + margin.left + margin.right + 20)
 .attr("height", height2 + margin.top + margin.bottom)
 .append("g")
@@ -67,6 +67,7 @@ var legend2 = svg2.selectAll(".legend2").data(colors);
 var legendEnter2 = legend2
 .enter()
 .append("g")
+.attr("display", "none")
 .attr("class", "legend")
 .attr("transform", function(d, i) {
   return "translate(30," + (i * 19 + 10) + ")";
@@ -149,14 +150,13 @@ await d3.csv("military_expenses.csv", d => {
 await new Promise((resolve, reject) => {
   setTimeout(resolve, 400);
 });
-return redraw();
 }
 loadData();
 
 //suck in the data, store it in a value called formatted, run the redraw function
 
 // force data to update when menu is changed
-var menu = d3.select("#selectoption").style("background-color", "#FFF4D5").on("change", change);
+var menu = d3.select("#selectoption").on("change", change);//.style("background-color", "#FFF4D5");
 
 d3.select(window)
 .on("keydown", function() {
@@ -357,6 +357,10 @@ svg2
   .attr("class", "x axis2");
   //.style("stroke-dasharray", "5 5"); // add dashes to axis
 
+  //display legend if data exist
+ (data2[0].Recipent == "No data")
+ ?svg2.selectAll(".legend").attr("display", "none")
+ :svg2.selectAll(".legend").attr("display", "true");
 //will draw the line
 var line = d3.svg
   .line()
