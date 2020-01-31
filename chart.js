@@ -94,6 +94,21 @@ legendEnter2
       return "Delievery planned";
   }
 });
+svg2
+.append("svg:image")
+.attr("x", width + 20)
+.attr("y", height2 - margin.bottom - 10)
+.attr("xlink:href", "rferllogo.png")
+.attr("class", "logo")
+.attr("display", "none");
+svg2
+.append("svg:text")
+.attr("text-anchor", "end")
+.attr("x", width + margin.right )
+.attr("y", height2 + margin.bottom - 10)
+.text(sourcetext)
+.attr("class", "source")
+.attr("display", "none");
 
 //make a clip path for the graph
 var clip = svg
@@ -361,6 +376,10 @@ svg2
  (data2[0].Recipent == "No data")
  ?svg2.selectAll(".legend").attr("display", "none")
  :svg2.selectAll(".legend").attr("display", "true");
+ svg2.select(".logo")
+ .attr("display", "true");
+ svg2.select(".source")
+ .attr("display", "true");
 //will draw the line
 var line = d3.svg
   .line()
@@ -874,16 +893,3 @@ var maxYValues = data.map(function(d) {
 });
 return d3.max(maxYValues);
 }
-svg2
-.append("svg:image")
-.attr("x", width + 20)
-.attr("y", height2 - margin.bottom - 10)
-.attr("xlink:href", "rferllogo.png")
-.attr("class", "logo");
-svg2
-.append("svg:text")
-.attr("text-anchor", "end")
-.attr("x", width + margin.right )
-.attr("y", height2 + margin.bottom - 10)
-.text(sourcetext)
-.attr("class", "source");
