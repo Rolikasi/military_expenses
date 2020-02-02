@@ -1,11 +1,10 @@
-//set the margins
+//set deafult margins, width, height
 var margin = { top: 30, right: 160, bottom: 30, left: 60 },
 width = 900 - margin.left - margin.right,
 height = 500 - margin.top - margin.bottom;
 height2 = 300 - margin.top - margin.bottom;
 
-d3.select("body").style("width", width + margin.left + margin.right + "px");//.style("background-color", "#DEE1E2")
-
+//d3.select("body").style("width", width + margin.left + margin.right + "px");//.style("background-color", "#DEE1E2")
 //write out your source text here
 var sourcetext = "B. Edil | Source: SIPRI";
 
@@ -32,11 +31,12 @@ var formatDate = d3.time.format("%b %d, '%y");
 //create an SVGs
 var svg = d3
 .select("#graphic")
-.style("width", width + margin.left + margin.right + "px")
+//.style("width", width + margin.left + margin.right + "px") for color
 .append("svg")
 //.style("background-color", "#FFF4D5")
 .attr("width", width + margin.left + margin.right)
 .attr("height", height + margin.top + margin.bottom)
+.call(responsivefy)
 .append("g")
 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -49,11 +49,12 @@ svg
 
 var svg2 = d3
 .select("#graphic2")
-.style("width", width + margin.left + margin.right + "px")
+//.style("width", width + margin.left + margin.right + "px") for color
 .append("svg")
 //.style("background-color", "#FFF4D5") // Brushing context box container
 .attr("width", width + margin.left + margin.right + 20)
 .attr("height", height2 + margin.top + margin.bottom)
+.call(responsivefy)
 .append("g")
 .attr("transform", "translate(" + (margin.left - 20) + "," + margin.top + ")");
 
@@ -62,6 +63,36 @@ svg2
 .attr("width", width)
 .attr("height", height2)
 .attr("class", "plot");
+
+function responsivefy(svg) {
+  // get container + svg aspect ratio
+  var container = d3.select(svg.node().parentNode),
+      width = parseInt(svg.style("width")),
+      height = parseInt(svg.style("height")),
+      aspect = width / height;
+
+  // add viewBox and preserveAspectRatio properties,
+  // and call resize so that svg resizes on inital page load
+  svg.attr("viewBox", "0 0 " + width + " " + height)
+      .attr("preserveAspectRatio", "xMinYMid")
+      .call(resize);
+
+  // to register multiple listeners for same event type,
+  // you need to add namespace, i.e., 'click.foo'
+  // necessary if you call invoke this function for multiple svgs
+  // api docs: https://github.com/mbostock/d3/wiki/Selections#on
+  d3.select(window).on("resize." + container.attr("id"), resize);
+
+  // get width of container and resize svg to fit it
+  function resize() {
+      var targetWidth = parseInt(container.style("width"));
+      (targetWidth < 1200)
+      ? svg.attr("width", targetWidth)
+      .attr("height", Math.round(targetWidth / aspect))
+      : null;
+  }
+}
+
 
 var legend2 = svg2.selectAll(".legend2").data(colors);
 var legendEnter2 = legend2
