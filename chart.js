@@ -184,7 +184,7 @@ await d3.csv("military_expenses.csv", d => {
   var selectoption = d3.select("#selectoption");
 
   selectoption
-    .selectAll("option")
+    .selectAll("select")
     .data(menuitems)
     .enter()
     .append("option")
