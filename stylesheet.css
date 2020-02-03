@@ -52,6 +52,7 @@ p{
         margin-bottom:0px;
         margin-right: 3pt;
         border: none;
+        background: none;
         -moz-appearance:none; /* Firefox */
         -webkit-appearance:none; /* Safari and Chrome */
         appearance:none;
