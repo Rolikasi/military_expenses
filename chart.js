@@ -129,7 +129,7 @@ svg2
 .append("svg:image")
 .attr("x", width + 20)
 .attr("y", height2 - margin.bottom - 10)
-.attr("xlink:href", "rferllogo.png")
+.attr("xlink:href", "./src/rferllogo.png")
 .attr("class", "logo")
 .attr("display", "none");
 svg2
@@ -175,10 +175,10 @@ return newArray;
 }
 
 async function loadData() {
-await d3.csv("top_suppliers.csv", d => {
+await d3.csv("./data/top_suppliers.csv", d => {
   suppliers = d;
 });
-await d3.csv("military_expenses.csv", d => {
+await d3.csv("./data/military_expenses.csv", d => {
   formatted = d;
   var menuitems = removeDuplicates(d, "Country");
   var selectoption = d3.select("#selectoption");
