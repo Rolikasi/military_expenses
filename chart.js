@@ -8,9 +8,6 @@ height2 = 300 - margin.top - margin.bottom;
 //write out your source text here
 var sourcetext = "B. Edil | Source: SIPRI";
 
-// set the type of number here, n is a number with a comma, .2% will get you a percent, .2f will get you 2 decimal points
-var NumbType = d3.format(".2f");
-
 // color array
 var orangescale = ["#EA6903", "#F2A568", "#8C3F02", "#007DBA"];
 var colors = ["#EA6903", "#F2A568"];
@@ -25,8 +22,7 @@ var noData = ["African Union**","Bahamas","Bhutan","Hamas Palestine*",	"Huthi re
 
 
 //define your year format here, first for the x scale, then if the date is displayed in tooltips
-var parseDate = d3.time.format("%m/%d/%y").parse;
-var formatDate = d3.time.format("%b %d, '%y");
+//var parseDate = d3.time.format("%m/%d/%y").parse;
 
 //create an SVGs
 var svg = d3
@@ -94,12 +90,20 @@ function responsivefy(svg) {
 }
 
 
-var legend2 = svg2.selectAll(".legend2").data(colors);
+var legend2 = svg2.selectAll(".legend").data(colors);
 var legendEnter2 = legend2
 .enter()
 .append("g")
 .attr("display", "none")
-.attr("class", "legend")
+.attr("class", (d, i) => {
+  switch (i) {
+    case 0:
+      return "legend delievered";
+    case 1:
+      return "legend delievery_planned";
+  }
+  "legend"
+})
 .attr("transform", function(d, i) {
   return "translate(30," + (i * 19 + 10) + ")";
 });
@@ -192,9 +196,6 @@ await d3.csv("./data/military_expenses.csv", d => {
     .append("span")
     .attr("id", d => "choice-" + d.Country)
     .text(d => d.Country);
-});
-await new Promise((resolve, reject) => {
-  setTimeout(resolve, 400);
 });
 }
 loadData();
@@ -404,9 +405,13 @@ svg2
   //.style("stroke-dasharray", "5 5"); // add dashes to axis
 
   //display legend if data exist
- (data2[0].Recipent == "No data")
- ?svg2.selectAll(".legend").attr("display", "none")
- :svg2.selectAll(".legend").attr("display", "true");
+transbardata.reduce((acc, curr) => acc + (isNaN(curr.y) ? 0 : curr.y), 0) == 0
+? svg2.selectAll(".delievery_planned").attr("display", "none")
+: svg2.selectAll(".delievery_planned").attr("display", "true");
+transbardata.reduce((acc, curr) => acc + (isNaN(curr.y0) ? 0: curr.y0), 0) == 0
+? svg2.selectAll(".delievered").attr("display", "none")
+: svg2.selectAll(".delievered").attr("display", "true");
+
  svg2.select(".logo")
  .attr("display", "true");
  svg2.select(".source")
