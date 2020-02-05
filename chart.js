@@ -99,9 +99,9 @@ var legendEnter2 = legend2
 .attr("class", (d, i) => {
   switch (i) {
     case 0:
-      return "legend delievered";
+      return "legend delivered";
     case 1:
-      return "legend delievery_planned";
+      return "legend delivery_planned";
   }
   "legend"
 })
@@ -125,9 +125,9 @@ legendEnter2
 .text(function(d, i) {
   switch (i) {
     case 0:
-      return "Delievered";
+      return "delivered";
     case 1:
-      return "Delievery planned";
+      return "delivery planned";
   }
 });
 svg2
@@ -286,8 +286,8 @@ bardata = data2
     return {
       supplier: d.Supplier,
       total: parseFloat(d.total, 10),
-      delievered: parseFloat(d.delievered, 10),
-      delievery_planned: parseFloat(d.delievery_planned, 10)
+      delivered: parseFloat(d.delivered, 10),
+      delivery_planned: parseFloat(d.delivery_planned, 10)
     };
   })
   .slice(0, topsuppliers);
@@ -296,8 +296,8 @@ bardata = data2
 var transbardata = bardata.map((d, i) => {
   return {
     x: "supplier" + i,
-    y: d.delievery_planned,
-    y0: d.delievered,
+    y: d.delivery_planned,
+    y0: d.delivered,
     z: d.supplier
   };
 });
@@ -407,11 +407,11 @@ svg2
 
   //display legend if data exist
 transbardata.reduce((acc, curr) => acc + (isNaN(curr.y) ? 0 : curr.y), 0) == 0
-? svg2.selectAll(".delievery_planned").attr("display", "none")
-: svg2.selectAll(".delievery_planned").attr("display", "true");
+? svg2.selectAll(".delivery_planned").attr("display", "none")
+: svg2.selectAll(".delivery_planned").attr("display", "true");
 transbardata.reduce((acc, curr) => acc + (isNaN(curr.y0) ? 0: curr.y0), 0) == 0
-? svg2.selectAll(".delievered").attr("display", "none")
-: svg2.selectAll(".delievered").attr("display", "true");
+? svg2.selectAll(".delivered").attr("display", "none")
+: svg2.selectAll(".delivered").attr("display", "true");
 
  svg2.select(".logo")
  .attr("display", "true");
@@ -445,11 +445,11 @@ barEnter
   })
   .style("fill", orangescale[0])
   .on("mouseover", d => {
-    d3.select(".delievered-value-" + d.x)
+    d3.select(".delivered-value-" + d.x)
     .attr("display", "true")
   })
   .on("mouseout", d => {
-    d3.select(".delievered-value-" + d.x)
+    d3.select(".delivered-value-" + d.x)
     .attr("display", "none")
   });
 barEnter
@@ -492,7 +492,7 @@ barEnter
 
   barEnter
   .append("text")
-  .attr("class", d => "delievered-value-" + d.x + " delbarvalue")
+  .attr("class", d => "delivered-value-" + d.x + " delbarvalue")
   .attr("display", "none")
   .attr("x", function(d) {
     return x2(d.y0);
