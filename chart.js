@@ -19,7 +19,8 @@ var xscaleticks = 8;
 var topsuppliers = 7;
 //define Nan countries
 var noData = ["African Union**","Bahamas","Bhutan","Hamas Palestine*",	"Huthi rebels Yemen*", "Kiribati",	"Marshall Islands",	"Micronesia",	"NATO**",	"OSCE**",	"Palau",	"PKK Turkey*",	"PRC Israel*Palestine*",	"Samoa",	"Solomon Islands",	"Suriname",	"Syria rebels*",	"Tonga",	"Tuvalu",	"Ukraine Rebels*",	"United Nations**",	"Vanuatu",	"Western Sahara"];
-
+//define radius of circle in legend
+var circleRadius = 10;
 
 //define your year format here, first for the x scale, then if the date is displayed in tooltips
 //var parseDate = d3.time.format("%m/%d/%y").parse;
@@ -56,7 +57,7 @@ var svg2 = d3
 
 svg2
 .append("svg:rect")
-.attr("width", width)
+.attr("width", width + 20)
 .attr("height", height2)
 .attr("class", "plot");
 
@@ -105,13 +106,13 @@ var legendEnter2 = legend2
   "legend"
 })
 .attr("transform", function(d, i) {
-  return "translate(30," + (i * 19 + 10) + ")";
+  return "translate(50," + (i * 25 + 15) + ")";
 });
 
 legendEnter2
 .append("circle")
 .attr("cx", width - 10.5)
-.attr("r", 7)
+.attr("r", circleRadius)
 .style("fill", function(d, i) {
   return colors.slice()[i];
 });
@@ -476,7 +477,7 @@ barEnter
 
 barEnter
   .append("text")
-  .attr("class", "legend")
+  .attr("class", "legend legendcountry")
   .attr("x", function(d) {
     return x2(d.y0 + d.y);
   })
@@ -784,7 +785,7 @@ legendEnter
   .attr("cy", function(d) {
     return legendscale(d.values[d.values.length - 1].value);
   })
-  .attr("r", 8)
+  .attr("r", circleRadius)
   .attr("fill", function(d) {
     return d.visible ? color(d.name) : "#FFFFFF";
   })
@@ -809,7 +810,7 @@ legendEnter
   .attr("id", d => "legend-" + d.name)
   .attr("x", width + 35)
   .attr("y", function(d) {
-    return legendscale(d.values[d.values.length - 1].value);
+    return legendscale(d.values[d.values.length - 1].value) + circleRadius / 2;
   })
   .text(function(d) {
     return d.name;
@@ -867,13 +868,13 @@ legendUpdate
     return legendscale(d.values[d.values.length - 1].value);
   });
 
-var selectedLegend = legendUpdate
+legendUpdate
   .select("text")
   .attr("id", d => {
     return "legend-" + d.name;
   })
   .attr("y", function(d) {
-    return legendscale(d.values[d.values.length - 1].value);
+    return legendscale(d.values[d.values.length - 1].value) + circleRadius / 2;
   })
   .text(function(d) {
     return d.name;
