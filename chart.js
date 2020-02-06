@@ -201,7 +201,21 @@ await d3.csv("./data/military_expenses.csv", d => {
 }
 loadData();
 
-//suck in the data, store it in a value called formatted, run the redraw function
+/* This click event to add class "open" to "custom-selectbox" */
+$('.custom-selectbox #selectoption').on('click', function( e ) {
+  $(this).parent().toggleClass("open");
+  return false;
+});
+/* This click event on document to detect outside click */
+$(document).on('click', function(e) {
+   var $selectBoxContainer = $('.custom-selectbox');
+   if($selectBoxContainer.hasClass('open')){
+       $selectBoxContainer.removeClass('open');
+   }
+   else{
+       return false;
+   }
+});
 
 // force data to update when menu is changed
 var menu = d3.select("#selectoption").on("change", change);//.style("background-color", "#FFF4D5");
