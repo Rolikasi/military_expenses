@@ -50,7 +50,6 @@ p{
         font-family: SourceSansPro-Bold;
         font-size: 25pt;
         margin-bottom:0px;
-        margin-right: 3pt;
         border: none;
         background: none;
         -moz-appearance:none; /* Firefox */
@@ -62,6 +61,25 @@ p{
       font-family: SourceSansPro-Light;
       font-size: 10pt;
     }
+    .custom-selectbox{
+      position: relative;
+      display: inline-block;
+  }
+  .custom-selectbox:after{
+      content: " ";
+      height: 0;
+      width: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #EA6903;
+      position: absolute;
+      right: 0px;
+      top: 5px;
+      transition: all 0.3s linear;
+  }
+  .custom-selectbox.open:after{
+    transform: rotate(-180deg);
+}
 
     .legend,
     .source {
